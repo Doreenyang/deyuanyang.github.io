@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Doreen Yang — Software Engineer</title>
+  <meta name="description" content="Doreen (Deyuan) Yang — Computer Science student and builder. Resume, projects, and contact." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+  <meta property="og:title" content="Doreen Yang — Software Engineer" />
+  <meta property="og:description" content="Resume, projects, and contact." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Doreen Yang</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a class="resume-btn" href="resume_cs.html">View CS Resume</a>
+      </nav>
+      <div class="palette-chooser" aria-hidden="false" title="Theme">
+        <button id="paletteBtn" aria-label="Change theme">🎨</button>
+        <div id="paletteMenu" class="palette-menu" hidden>
+          <button data-theme="" class="palette-option">Dark</button>
+          <button data-theme="theme-alt" class="palette-option">Light</button>
+          <button data-theme="theme-vivid" class="palette-option">Vivid</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <svg viewBox="0 0 800 400" preserveAspectRatio="none" class="hero-blob"><defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="var(--accent2)"/><stop offset="1" stop-color="var(--accent1)"/></linearGradient></defs><path fill="url(#g1)" d="M0 100 C150 200 350 0 800 100 L800 400 L0 400 Z" opacity="0.12"></path></svg>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi — I’m Doreen (Deyuan) Yang</h1>
+          <p class="lead">Computer Science student and full-stack builder. I build analytics pipelines, web apps, and ML tooling for production.</p>
+          <p class="lead small">I <span id="typewriter" aria-live="polite"></span></p>
+          <div class="cta-row">
+            <a class="cta" href="resume_cs.html">View CS Resume</a>
+            <a class="cta ghost" href="resume_full.html">View Full Resume</a>
+            <a class="cta outline" href="resume.md" download>Download MD</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card-inner">
+            <div class="avatar-row">
+              <figure class="avatar-ring">
+                <img class="avatar-img" src="assets/898A0136.JPG" alt="Doreen Yang">
+              </figure>
+              <div class="quick-heading">
+                <h3>Quick Stats</h3>
+                <div class="muted">Computer Science • Full-stack • ML & Analytics</div>
+              </div>
+            </div>
+            <ul class="stats-list">
+              <li><span class="stat-key">Languages</span><span class="stat-val">Python, JS, TS, C++</span></li>
+              <li><span class="stat-key">Tools</span><span class="stat-val">FastAPI, React, PostgreSQL, AWS</span></li>
+              <li><span class="stat-key">Focus</span><span class="stat-val">Product analytics & backend</span></li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/Doreenyang" target="_blank">GitHub</a>
+              <a href="https://www.linkedin.com/in/deyuan-yang-ba7680222/" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h2>About</h2>
+      <p>I design and ship reliable web applications and data pipelines with a focus on measurable product impact. I enjoy building dashboards and ML tooling that help teams make decisions quickly.</p>
+    </section>
+
+    <section id="work" class="container section">
+      <h2>Selected Work</h2>
+      <article>
+        <h3>Sendback — Full Stack</h3>
+        <p>Built an analytics pipeline for 10k+ events, integrated AWS, improved auth flows, designed A/B frameworks.</p>
+      </article>
+      <article>
+        <h3>Sustain-a-Plate — Dashboard</h3>
+        <p>Interactive waste-tracking dashboard and backend optimizations that increased engagement by 31%.</p>
+      </article>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project">
+          <h4>LSTM Multivariate Time-Series Analyzer</h4>
+          <p>Training pipeline, diagnostics, and visualizations for forecasting.</p>
+        </div>
+        <div class="project">
+          <h4>EcoTag</h4>
+          <p>Sustainability product scanner; semi-finalist at WashU Skandalaris Venture Competition.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact</h2>
+      <p>Open to roles in product engineering, analytics, and ML tooling. <a href="mailto:doreenyang02@gmail.com?subject=Interested%20in%20connecting">Email me</a>.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Doreen (Deyuan) Yang — Built with HTML, CSS & JS • <a href="resume.html?type=cs">Resume</a></div>
+  </footer>
+  <script src="assets/main.js"></script>
+  <!-- Chat widget -->
+  <div id="chat-root"></div>
+  <script src="assets/chat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+</body>
+</html>
