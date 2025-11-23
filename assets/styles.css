@@ -109,6 +109,56 @@ nav a{color:var(--muted);margin-left:18px;text-decoration:none}
   margin:12px 0 8px 0;
   font-size:16px;
 }
+.project-tech{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid var(--border);
+  font-size:12px;
+  color:var(--muted);
+  font-weight:600;
+}
+.work-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:24px;
+  margin-top:24px;
+}
+.work-item{
+  background:rgba(255,255,255,0.02);
+  padding:20px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+.work-item:hover{
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+.work-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:4px;
+  gap:12px;
+}
+.work-header h3{
+  margin:0;
+  font-size:18px;
+  color:var(--accent1);
+}
+.work-date{
+  font-size:12px;
+  color:var(--muted);
+  white-space:nowrap;
+}
+.work-company{
+  font-weight:600;
+  color:var(--text);
+  margin:4px 0 8px 0;
+}
+.work-item p:last-child{
+  margin-bottom:0;
+}
 .site-footer{padding:28px 0;color:var(--muted);text-align:center}
 
 /* resume page */
@@ -143,6 +193,9 @@ nav a{color:var(--muted);margin-left:18px;text-decoration:none}
   .hero-card img{width:96px;height:96px}
   .card-inner h3{font-size:18px}
   .project-grid{grid-template-columns:1fr;gap:12px}
+  .work-grid{grid-template-columns:1fr}
+  .work-header{flex-direction:column;gap:4px}
+  .work-date{font-size:11px}
   .featured-grid{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:1fr}
   .content-grid{grid-template-columns:1fr}

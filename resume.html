@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Resume — Doreen Yang</title>
-  <meta name="description" content="Doreen Yang — View my Technical or Complete resume." />
+  <title>Resume — Deyuan Yang</title>
+  <meta name="description" content="Deyuan Yang — View my Technical or Complete resume." />
   <link rel="stylesheet" href="assets/styles.css">
   <style>
     .resume-tabs {
@@ -46,26 +46,27 @@
     }
     .pdf-viewer-container {
       width: 100%;
-      height: calc(100vh - 200px);
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 12px;
     }
     .pdf-actions {
       display: flex;
       gap: 12px;
       justify-content: center;
-      padding: 16px 0;
+      padding: 8px 0;
     }
     .pdf-viewer {
-      flex: 1;
+      width: 100%;
+      height: auto;
+      min-height: 1200px;
       border: 1px solid var(--border);
       border-radius: 8px;
-      overflow: hidden;
+      overflow: visible;
     }
     .pdf-viewer iframe {
       width: 100%;
-      height: 100%;
+      height: 1200px;
       border: none;
     }
     .tab-content {
@@ -75,15 +76,27 @@
       display: block;
     }
     @media (max-width: 768px) {
-      .pdf-viewer-container {
-        height: calc(100vh - 220px);
-      }
       .resume-tabs {
         gap: 8px;
+        margin-bottom: 16px;
       }
       .resume-tab {
         padding: 10px 16px;
         font-size: 14px;
+      }
+      .pdf-viewer {
+        min-height: 1000px;
+      }
+      .pdf-viewer iframe {
+        height: 1000px;
+      }
+    }
+    @media (min-width: 769px) and (min-height: 900px) {
+      .pdf-viewer {
+        min-height: 1400px;
+      }
+      .pdf-viewer iframe {
+        height: 1400px;
       }
     }
   </style>
@@ -91,7 +104,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none">Doreen Yang</a></div>
+      <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none">Deyuan Yang</a></div>
       <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -108,9 +121,9 @@
     </div>
   </header>
 
-  <main class="container">
-    <h1 style="margin-bottom: 8px;">Resume</h1>
-    <p style="color: var(--muted); margin-bottom: 24px;">Choose between my technical or complete resume</p>
+  <main class="container" style="padding-top: 16px; padding-bottom: 16px;">
+    <h1 style="margin-bottom: 4px; font-size: 26px;">Resume</h1>
+    <p style="color: var(--muted); margin-bottom: 16px; font-size: 14px;">Choose between my technical or complete resume</p>
     
     <div class="resume-tabs">
       <button class="resume-tab active" data-tab="technical">Technical</button>
@@ -124,7 +137,7 @@
           <a href="assets/Deyuan_Resume_CS.pdf" target="_blank" class="cta outline" style="margin:0">Open in New Tab</a>
         </div>
         <div class="pdf-viewer">
-          <iframe src="assets/Deyuan_Resume_CS.pdf" title="Doreen Yang - Technical Resume"></iframe>
+          <iframe src="assets/Deyuan_Resume_CS.pdf" title="Deyuan Yang - Technical Resume"></iframe>
         </div>
       </div>
     </div>
@@ -136,7 +149,7 @@
           <a href="assets/Doreen_Resume_Full Version.pdf" target="_blank" class="cta outline" style="margin:0">Open in New Tab</a>
         </div>
         <div class="pdf-viewer">
-          <iframe src="assets/Doreen_Resume_Full Version.pdf" title="Doreen Yang - Complete Resume"></iframe>
+          <iframe src="assets/Doreen_Resume_Full Version.pdf" title="Deyuan Yang - Complete Resume"></iframe>
         </div>
       </div>
     </div>
