@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects - Doreen Yang</title>
+  <meta name="description" content="Explore Doreen Yang's personal projects and side work." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none">Doreen Yang</a></div>
+      <nav>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a class="resume-btn" href="resume_cs.html">View CS Resume</a>
+      </nav>
+      <div class="palette-chooser" aria-hidden="false" title="Theme">
+        <button id="paletteBtn" aria-label="Change theme">🎨</button>
+        <div id="paletteMenu" class="palette-menu" hidden>
+          <button data-theme="" class="palette-option">Dark</button>
+          <button data-theme="theme-alt" class="palette-option">Light</button>
+          <button data-theme="theme-vivid" class="palette-option">Vivid</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section page-content">
+      <h1>Projects</h1>
+      
+      <div class="project-grid">
+        <div class="project">
+          <h3>LSTM Multivariate Time-Series Analyzer</h3>
+          <p class="project-type">Machine Learning • Data Science</p>
+          <p>Production-grade ML pipeline for forecasting with PyTorch, featuring comprehensive diagnostics and evaluation metrics.</p>
+          
+          <h4>Features</h4>
+          <ul>
+            <li>Built training pipeline with PyTorch for multivariate time-series forecasting</li>
+            <li>Implemented comprehensive diagnostics and evaluation metrics</li>
+            <li>Created visualization tools for model performance analysis</li>
+            <li>Optimized hyperparameter tuning with grid search</li>
+            <li>Deployed pipeline with Docker for reproducibility</li>
+          </ul>
+          
+          <div class="tech-stack">
+            <strong>Tech:</strong> Python, PyTorch, Pandas, NumPy, Matplotlib, Docker
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>EcoTag</h3>
+          <p class="project-type">Web App • Sustainability</p>
+          <p>Sustainability product scanner that was a semi-finalist at WashU Skandalaris Venture Competition.</p>
+          
+          <h4>Features</h4>
+          <ul>
+            <li>Scans product barcodes and provides sustainability ratings</li>
+            <li>Helps users make eco-conscious purchasing decisions</li>
+            <li>Mobile-responsive web application</li>
+            <li>Integration with external product databases</li>
+          </ul>
+          
+          <div class="tech-stack">
+            <strong>Tech:</strong> React, Node.js, MongoDB, External APIs
+          </div>
+          
+          <div class="project-badge">
+            🏆 Semi-finalist - WashU Skandalaris Venture Competition
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p class="project-type">Web Development • AI Integration</p>
+          <p>Personal portfolio with AI-powered chat assistant built from scratch using vanilla JavaScript and modern CSS.</p>
+          
+          <h4>Features</h4>
+          <ul>
+            <li>AI chat integration using OpenAI API</li>
+            <li>Three custom color themes with smooth transitions</li>
+            <li>Responsive design with accessibility features</li>
+            <li>Markdown resume loader with syntax highlighting</li>
+            <li>Deployed on Vercel with serverless functions</li>
+          </ul>
+          
+          <div class="tech-stack">
+            <strong>Tech:</strong> HTML, CSS, JavaScript, OpenAI API, Vercel
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Doreen (Deyuan) Yang — Built with HTML, CSS & JS • <a href="resume.html?type=cs">Resume</a></div>
+  </footer>
+  <script src="assets/main.js"></script>
+  <div id="chat-root"></div>
+  <script src="assets/chat.js"></script>
+</body>
+</html>
