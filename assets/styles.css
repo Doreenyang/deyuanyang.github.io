@@ -1,14 +1,14 @@
 :root{
-  /* Primary (dark) theme: modern blue-violet gradient */
-  --bg:#0a0e1a; /* deep navy blue */
-  --card:#141926; /* elevated card background */
-  --muted:#94a3b8; /* balanced muted text */
-  --accent1:#6366f1; /* indigo */
-  --accent2:#06b6d4; /* cyan */
-  --text:#f1f5f9; /* clean white text */
-  --cta-text: #0f172a; /* CTA text on gradients */
-  --bg2: #0f1423; /* secondary gradient stop */
-  --border: rgba(148, 163, 184, 0.1); /* subtle borders */
+  /* Primary (dark) theme: warm sunset gradient */
+  --bg:#fff5f7; /* soft pink white */
+  --card:#ffffff; /* white card background */
+  --muted:#be185d; /* deep pink muted text */
+  --accent1:#f97316; /* vibrant orange */
+  --accent2:#ec4899; /* hot pink */
+  --text:#1a0a0f; /* dark text */
+  --cta-text: #ffffff; /* white CTA text on gradients */
+  --bg2: #ffe4ec; /* light pink gradient stop */
+  --border: rgba(236, 72, 153, 0.15); /* pink borders */
 }
 
 /* Alternate light theme */
@@ -37,9 +37,10 @@
   --border: rgba(233, 213, 255, 0.1);
 }
 *{box-sizing:border-box}
-body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(135deg,var(--bg) 0%, var(--bg2) 100%); color:var(--text); margin:0; -webkit-font-smoothing:antialiased; transition:background 420ms ease,color 320ms ease}
+body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(135deg,var(--bg) 0%, var(--bg2) 100%); color:var(--text); margin:0; -webkit-font-smoothing:antialiased; transition:background 420ms ease,color 320ms ease;overflow-x:hidden}
 .container{max-width:1000px;margin:0 auto;padding:28px}
-.site-header{position:sticky;top:0;background:transparent;padding:14px 0}
+.site-header{position:sticky;top:0;background:linear-gradient(135deg, rgba(255,245,247,0.98) 0%, rgba(255,228,236,0.98) 100%);backdrop-filter:blur(12px);padding:14px 0;border-bottom:1px solid var(--border);box-shadow:0 2px 8px rgba(236,72,153,0.05);z-index:100;position:relative}
+.site-header::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle at 20% 50%, rgba(249,115,22,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 30%, rgba(236,72,153,0.08) 0%, transparent 50%), radial-gradient(circle at 50% 80%, rgba(251,146,60,0.06) 0%, transparent 50%);pointer-events:none;z-index:-1}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
 .brand{font-weight:700}
 nav a{color:var(--muted);margin-left:18px;text-decoration:none}
