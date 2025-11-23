@@ -23,6 +23,20 @@
 
   "experience": [
     {
+      "role": "MakerTech",
+      "company": "Jubel Makerspace at WashU (Spartan Light Metal Products)",
+      "duration": "Aug 2024 - Present",
+      "description": "Student workshop assistant and makerspace technician",
+      "achievements": [
+        "Assist students with 3D printing, laser cutting, and 3D scanning projects",
+        "Lead studio workshops teaching hands-on maker skills and fabrication techniques",
+        "Provide technical support for electronics projects and equipment troubleshooting",
+        "Mentor students on design for manufacturing and prototyping best practices",
+        "Maintain and operate makerspace equipment including 3D printers, laser cutters, and scanners"
+      ],
+      "tech_stack": ["3D Printing", "Laser Cutting", "3D Scanning", "Electronics", "Workshop Teaching"]
+    },
+    {
       "role": "Progressive Web App Developer",
       "company": "Livelihood Impact Fund",
       "duration": "Aug 2025 - Oct 2025",
