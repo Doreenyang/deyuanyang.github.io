@@ -3,20 +3,62 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Doreen Yang — Software Engineer</title>
-  <meta name="description" content="Doreen (Deyuan) Yang — Computer Science student and builder. Resume, projects, and contact." />
+  <title>Doreen Yang — Software Engineer | Full Stack Developer</title>
+  <meta name="description" content="Doreen (Deyuan) Yang is a Computer Science student at Washington University specializing in full-stack development, ML infrastructure, and data engineering. View portfolio, projects, and contact information." />
+  <meta name="keywords" content="Doreen Yang, Deyuan Yang, Software Engineer, Full Stack Developer, Computer Science, WashU, Python, JavaScript, React, FastAPI, Machine Learning" />
+  <meta name="author" content="Doreen Yang" />
   <link rel="icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://doreenyang.github.io/" />
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
-  <meta property="og:title" content="Doreen Yang — Software Engineer" />
-  <meta property="og:description" content="Resume, projects, and contact." />
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://doreenyang.github.io/" />
+  <meta property="og:title" content="Doreen Yang — Software Engineer | Full Stack Developer" />
+  <meta property="og:description" content="Computer Science student at WashU specializing in full-stack development, ML infrastructure, and data engineering." />
+  <meta property="og:image" content="https://doreenyang.github.io/assets/898A0136.JPG" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://doreenyang.github.io/" />
+  <meta property="twitter:title" content="Doreen Yang — Software Engineer | Full Stack Developer" />
+  <meta property="twitter:description" content="Computer Science student at WashU specializing in full-stack development, ML infrastructure, and data engineering." />
+  <meta property="twitter:image" content="https://doreenyang.github.io/assets/898A0136.JPG" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Doreen Yang",
+    "alternateName": "Deyuan Yang",
+    "url": "https://doreenyang.github.io",
+    "image": "https://doreenyang.github.io/assets/898A0136.JPG",
+    "jobTitle": "Software Engineer",
+    "worksFor": {
+      "@type": "EducationalOrganization",
+      "name": "Washington University in St. Louis"
+    },
+    "alumniOf": "Washington University in St. Louis",
+    "knowsAbout": ["Software Development", "Machine Learning", "Data Engineering", "Full Stack Development", "Python", "JavaScript", "React", "FastAPI"],
+    "sameAs": [
+      "https://github.com/doreenyang",
+      "https://linkedin.com/in/doreenyang"
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">Doreen Yang</div>
-      <nav>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="mainNav">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="work.html">Work</a>

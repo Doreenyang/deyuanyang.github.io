@@ -2,6 +2,32 @@
 (function(){
   function qs(sel){return document.querySelector(sel)}
 
+  // Mobile Menu Toggle
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const mainNav = document.getElementById('mainNav');
+  if (mobileMenuToggle && mainNav) {
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenuToggle.classList.toggle('active');
+      mainNav.classList.toggle('open');
+    });
+    
+    // Close menu when clicking nav links
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuToggle.classList.remove('active');
+        mainNav.classList.remove('open');
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuToggle.contains(e.target) && !mainNav.contains(e.target)) {
+        mobileMenuToggle.classList.remove('active');
+        mainNav.classList.remove('open');
+      }
+    });
+  }
+
   // Theme (unified stored key: 'site-theme')
   const storedSiteTheme = localStorage.getItem('site-theme');
   if(storedSiteTheme) {
