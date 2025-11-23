@@ -50,6 +50,12 @@ body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Rob
 .mobile-menu-toggle.active span:nth-child(2){opacity:0}
 .mobile-menu-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(6px, -6px)}
 nav a{color:var(--muted);margin-left:18px;text-decoration:none}
+.nav-dropdown{position:relative;display:inline-block}
+.nav-dropdown > a{cursor:pointer;user-select:none}
+.nav-dropdown-content{display:none;position:absolute;top:100%;left:0;background:var(--card);border:1px solid var(--border);border-radius:8px;min-width:160px;box-shadow:0 4px 12px rgba(0,0,0,0.1);margin-top:8px;z-index:200}
+.nav-dropdown-content a{display:block;padding:10px 16px;margin:0;color:var(--text);white-space:nowrap}
+.nav-dropdown-content a:hover{background:rgba(236,72,153,0.1);color:var(--accent1)}
+.nav-dropdown:hover .nav-dropdown-content{display:block}
 .hero{padding:64px 0}
 .hero-grid{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center}
 .hero h1{font-size:40px;margin:0 0 12px}
@@ -78,7 +84,11 @@ nav a{color:var(--muted);margin-left:18px;text-decoration:none}
 .links a{margin-right:10px;color:var(--accent2);text-decoration:none}
 .section{padding:36px 0}
 .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.project{background:rgba(255,255,255,0.02);padding:16px;border-radius:8px}
+.featured-grid{grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:24px;margin-bottom:48px}
+.project{background:rgba(255,255,255,0.02);padding:16px;border-radius:8px;border:1px solid rgba(255,255,255,0.05);transition:transform 0.2s ease,box-shadow 0.2s ease}
+.project:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.featured-project{background:linear-gradient(135deg, rgba(249,115,22,0.05), rgba(236,72,153,0.05));border:1px solid rgba(249,115,22,0.2);padding:24px}
+.project-badge{display:inline-block;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:var(--cta-text);padding:4px 12px;border-radius:12px;font-size:12px;font-weight:600;margin-bottom:12px}
 .project h3{
   margin:0 0 4px 0;
   font-size:20px;
@@ -122,12 +132,18 @@ nav a{color:var(--muted);margin-left:18px;text-decoration:none}
   nav.open{right:0}
   nav a{margin-left:0;font-size:16px;padding:12px 16px;border-radius:8px;transition:background 0.2s ease}
   nav a:hover,nav a.active{background:rgba(236,72,153,0.1);color:var(--accent1)}
+  .nav-dropdown{display:block;width:100%}
+  .nav-dropdown > a{display:block;margin:0;padding:12px 16px}
+  .nav-dropdown-content{position:static;display:none;background:rgba(236,72,153,0.05);border:none;box-shadow:none;margin:0;padding-left:16px}
+  .nav-dropdown-content.show{display:block}
+  .nav-dropdown-content a{padding:8px 16px;font-size:14px}
   .resume-btn{order:10;text-align:center;margin-top:8px;padding:12px 16px!important;display:block;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:var(--cta-text);border-radius:8px;font-weight:600}
   .hero{padding:32px 0}
   .hero-card{display:flex;justify-content:center;padding:16px}
   .hero-card img{width:96px;height:96px}
   .card-inner h3{font-size:18px}
   .project-grid{grid-template-columns:1fr;gap:12px}
+  .featured-grid{grid-template-columns:1fr}
   .skills-grid{grid-template-columns:1fr}
   .content-grid{grid-template-columns:1fr}
   .cta-row{display:flex;flex-direction:column;gap:10px}

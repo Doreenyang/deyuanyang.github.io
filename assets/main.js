@@ -11,8 +11,20 @@
       mainNav.classList.toggle('open');
     });
     
-    // Close menu when clicking nav links
-    mainNav.querySelectorAll('a').forEach(link => {
+    // Handle dropdown toggle on mobile
+    const navDropdowns = mainNav.querySelectorAll('.nav-dropdown > a');
+    navDropdowns.forEach(dropdownTrigger => {
+      dropdownTrigger.addEventListener('click', (e) => {
+        if (window.innerWidth <= 880) {
+          e.preventDefault();
+          const dropdownContent = dropdownTrigger.nextElementSibling;
+          dropdownContent.classList.toggle('show');
+        }
+      });
+    });
+    
+    // Close menu when clicking nav links (except dropdown triggers)
+    mainNav.querySelectorAll('a:not(.nav-dropdown > a)').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenuToggle.classList.remove('active');
         mainNav.classList.remove('open');

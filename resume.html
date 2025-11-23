@@ -4,38 +4,165 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Resume — Doreen Yang</title>
+  <meta name="description" content="Doreen Yang — View my Technical or Complete resume." />
   <link rel="stylesheet" href="assets/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+  <style>
+    .resume-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .resume-tab {
+      padding: 12px 24px;
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      border-radius: 8px 8px 0 0;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .resume-tab:hover {
+      background: rgba(236,72,153,0.1);
+      color: var(--text);
+    }
+    .resume-tab.active {
+      color: var(--accent1);
+      background: rgba(249,115,22,0.1);
+    }
+    .resume-tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      border-radius: 2px;
+    }
+    .pdf-viewer-container {
+      width: 100%;
+      height: calc(100vh - 200px);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .pdf-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      padding: 16px 0;
+    }
+    .pdf-viewer {
+      flex: 1;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .pdf-viewer iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .pdf-viewer-container {
+        height: calc(100vh - 220px);
+      }
+      .resume-tabs {
+        gap: 8px;
+      }
+      .resume-tab {
+        padding: 10px 16px;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
-<body class="resume-page">
-  <header class="site-header small">
+<body>
+  <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">Doreen Yang</div>
-      <nav>
+      <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none">Doreen Yang</a></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="mainNav">
         <a href="index.html">Home</a>
-        <a href="resume.html?type=cs">CS</a>
-        <a href="resume.html?type=full">Full</a>
-        <a href="resume.md" download>Download MD</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="resume.html" class="active">Resume</a>
       </nav>
     </div>
   </header>
 
-  <main class="container resume-container">
-    <div class="resume-actions">
-      <a class="cta" id="download-btn" href="#">Download</a>
-      <label class="theme-toggle">Theme
-        <input type="checkbox" id="themeToggle">
-      </label>
+  <main class="container">
+    <h1 style="margin-bottom: 8px;">Resume</h1>
+    <p style="color: var(--muted); margin-bottom: 24px;">Choose between my technical or complete resume</p>
+    
+    <div class="resume-tabs">
+      <button class="resume-tab active" data-tab="technical">Technical</button>
+      <button class="resume-tab" data-tab="complete">Complete</button>
     </div>
-    <article id="resume-content" class="markdown-body">Loading...</article>
+
+    <div id="technical" class="tab-content active">
+      <div class="pdf-viewer-container">
+        <div class="pdf-actions">
+          <a href="assets/Deyuan_Resume_CS.pdf" download class="cta" style="margin:0">Download PDF</a>
+          <a href="assets/Deyuan_Resume_CS.pdf" target="_blank" class="cta outline" style="margin:0">Open in New Tab</a>
+        </div>
+        <div class="pdf-viewer">
+          <iframe src="assets/Deyuan_Resume_CS.pdf" title="Doreen Yang - Technical Resume"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div id="complete" class="tab-content">
+      <div class="pdf-viewer-container">
+        <div class="pdf-actions">
+          <a href="assets/Doreen_Resume_Full Version.pdf" download class="cta" style="margin:0">Download PDF</a>
+          <a href="assets/Doreen_Resume_Full Version.pdf" target="_blank" class="cta outline" style="margin:0">Open in New Tab</a>
+        </div>
+        <div class="pdf-viewer">
+          <iframe src="assets/Doreen_Resume_Full Version.pdf" title="Doreen Yang - Complete Resume"></iframe>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">© 2025 Doreen (Deyuan) Yang</div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
   <script src="assets/main.js"></script>
+  <script>
+    // Tab switching functionality
+    const tabs = document.querySelectorAll('.resume-tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetTab = tab.dataset.tab;
+        
+        // Remove active class from all tabs and contents
+        tabs.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked tab and corresponding content
+        tab.classList.add('active');
+        document.getElementById(targetTab).classList.add('active');
+      });
+    });
+  </script>
+  <div id="chat-root"></div>
+  <script src="assets/chat.js"></script>
 </body>
 </html>

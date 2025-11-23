@@ -25,7 +25,7 @@
         <a href="work.html">Work</a>
         <a href="projects.html" class="active">Projects</a>
         <a href="contact.html">Contact</a>
-        <a class="resume-btn" href="resume_cs.html">View CS Resume</a>
+        <a href="resume.html">Resume</a>
       </nav>
     </div>
   </header>
@@ -33,9 +33,13 @@
   <main>
     <section class="container section page-content">
       <h1>Projects</h1>
+      <p class="lead" style="margin-bottom:32px">Selected work spanning mobile development, AI/ML, full-stack applications, and systems programming.</p>
       
-      <div class="project-grid">
-        <div class="project">
+      <!-- Featured Projects -->
+      <h2 style="font-size:24px;margin-bottom:20px;color:var(--accent1)">Featured Projects</h2>
+      <div class="project-grid featured-grid">
+        <div class="project featured-project">
+          <span class="project-badge">⭐ Featured</span>
           <h3>Synaptrack Mobile App</h3>
           <p class="project-type">Mobile Development • Research</p>
           <p class="project-date">Fall 2025</p>
@@ -46,35 +50,35 @@
             <li>Developed Android version using React Native, expanding potential participant base by <strong>~50%</strong></li>
             <li>Unified iOS and Android codebases by integrating the original Xcode project</li>
             <li>Reduced future maintenance overhead through cross-platform architecture</li>
-            <li>Collaborated with research team to meet scientific data collection requirements</li>
           </ul>
           
           <div class="tech-stack">
-            <strong>Tech:</strong> React Native, Xcode, Android Studio, Cross-platform Development
+            <strong>Tech:</strong> React Native, Xcode, Android Studio
           </div>
         </div>
 
-        <div class="project">
-          <h3>D10: AI Agent GUI for Architectural Drawing Object Detection</h3>
+        <div class="project featured-project">
+          <span class="project-badge">⭐ Featured</span>
+          <h3>D10: AI Agent for Architectural Drawing</h3>
           <p class="project-type">AI/ML • Computer Vision</p>
           <p class="project-date">Summer 2025</p>
           <p>AI-powered system for automated object detection on architectural plans with interactive GUI.</p>
           
           <h4>Key Achievements</h4>
           <ul>
-            <li>Fine-tuned an LLM to automate object detection, improving analysis speed by <strong>90%</strong> vs manual review</li>
+            <li>Fine-tuned LLM to automate object detection, improving analysis speed by <strong>90%</strong></li>
             <li>Built Streamlit GUI to visualize AI outputs and enhance user interaction</li>
-            <li>Automated bid estimation pipeline by syncing email and extracting key bid information</li>
-            <li>Streamlined initial quote process for architectural projects</li>
+            <li>Automated bid estimation pipeline with email integration</li>
           </ul>
           
           <div class="tech-stack">
-            <strong>Tech:</strong> Python, LLM Fine-tuning, Streamlit, Computer Vision, Email Automation
+            <strong>Tech:</strong> Python, LLM Fine-tuning, Streamlit, Computer Vision
           </div>
         </div>
 
-        <div class="project">
-          <h3>WhoFundedIt - AI-Powered Research Tool</h3>
+        <div class="project featured-project">
+          <span class="project-badge">⭐ Featured</span>
+          <h3>WhoFundedIt - AI Research Tool</h3>
           <p class="project-type">Web App • NLP</p>
           <p class="project-date">May 2023 – August 2023</p>
           <p>Web application using NLP and AI to extract and summarize funding sources from academic papers.</p>
@@ -84,30 +88,29 @@
             <li>NLP-based extraction of funding information from research papers</li>
             <li>Automated backend data processing pipelines for scalable data ingestion</li>
             <li>AI-powered summarization of funding sources</li>
-            <li>Searchable database of academic funding information</li>
           </ul>
           
           <div class="tech-stack">
-            <strong>Tech:</strong> Python, NLP, AI/ML, Backend Pipelines, Web Scraping
+            <strong>Tech:</strong> Python, NLP, AI/ML, Backend Pipelines
           </div>
         </div>
+      </div>
 
+      <!-- Full Stack & Web Development -->
+      <h2 style="font-size:24px;margin:48px 0 20px;color:var(--accent1)">Full Stack & Web Development</h2>
+      <div class="project-grid">
         <div class="project">
           <h3>Seasonal Trade-Up Platform</h3>
           <p class="project-type">Full Stack • E-commerce</p>
           <p class="project-date">Spring 2024 - CSE 437</p>
           <p>Full-stack e-commerce platform with cloud-native deployment and CI/CD automation.</p>
-          
-          <h4>Features</h4>
           <ul>
-            <li>eBay API integration for product listings and transactions</li>
-            <li>Docker/Kubernetes deployment for scalability</li>
-            <li>CI/CD pipelines for automated testing and deployment</li>
-            <li>Microservices architecture for modular development</li>
+            <li>eBay API integration for product listings</li>
+            <li>Docker/Kubernetes deployment</li>
+            <li>CI/CD pipelines for automated testing</li>
           </ul>
-          
           <div class="tech-stack">
-            <strong>Tech:</strong> React, Node.js, Docker, Kubernetes, eBay API, CI/CD
+            <strong>Tech:</strong> React, Node.js, Docker, Kubernetes, eBay API
           </div>
         </div>
 
@@ -116,36 +119,28 @@
           <p class="project-type">Web App • AI Recommendations</p>
           <p class="project-date">Spring 2024 - CSE 503</p>
           <p>Django web app with intelligent matching between job seekers and employers.</p>
-          
-          <h4>Features</h4>
           <ul>
-            <li>Resume parser with automatic skill extraction</li>
-            <li>Smart job/candidate recommendation engine</li>
-            <li>Real-time messaging between users</li>
-            <li>Analytics dashboard for tracking application metrics</li>
+            <li>Resume parser with skill extraction</li>
+            <li>Smart job/candidate recommendations</li>
+            <li>Real-time messaging system</li>
           </ul>
-          
           <div class="tech-stack">
-            <strong>Tech:</strong> Django, Python, NLP, Real-time Messaging, PostgreSQL
+            <strong>Tech:</strong> Django, Python, NLP, PostgreSQL
           </div>
         </div>
 
         <div class="project">
-          <h3>Element - Shopify UI/UX and SEO Optimization</h3>
+          <h3>Element - Shopify Optimization</h3>
           <p class="project-type">E-commerce • UX Design</p>
           <p class="project-date">Fall 2024</p>
           <p>Enhanced e-commerce site performance through UI/UX improvements and SEO optimization.</p>
-          
-          <h4>Key Achievements</h4>
           <ul>
-            <li>Improved traffic and conversion rates through SEO optimization</li>
-            <li>Redesigned UI/UX using Shopify's design system</li>
-            <li>Implemented Google Analytics for data-driven decision making</li>
-            <li>A/B tested design variations to maximize conversions</li>
+            <li>Improved traffic and conversion rates</li>
+            <li>Google Analytics integration</li>
+            <li>A/B tested design variations</li>
           </ul>
-          
           <div class="tech-stack">
-            <strong>Tech:</strong> Shopify, Google Analytics, SEO, UI/UX Design
+            <strong>Tech:</strong> Shopify, Google Analytics, SEO
           </div>
         </div>
 
@@ -153,111 +148,72 @@
           <h3>No-Code Portfolio Generator</h3>
           <p class="project-type">Web Development</p>
           <p class="project-date">Spring 2024 - CSE 204</p>
-          <p>Beginner-friendly web app that transforms uploaded resumes into customizable portfolios.</p>
-          
-          <h4>Features</h4>
+          <p>Transforms uploaded resumes into customizable portfolios with theme selection and HTML export.</p>
           <ul>
             <li>PDF/image upload with text extraction</li>
-            <li>Theme/template selection for personalization</li>
-            <li>HTML export and link sharing functionality</li>
-            <li>Drag-and-drop interface for easy customization</li>
+            <li>Theme/template selection</li>
+            <li>HTML export and link sharing</li>
           </ul>
-          
           <div class="tech-stack">
-            <strong>Tech:</strong> HTML, CSS, JavaScript, PDF.js, File Upload APIs
+            <strong>Tech:</strong> HTML, CSS, JavaScript, PDF.js
           </div>
         </div>
+      </div>
 
+      <!-- Mobile & Game Development -->
+      <h2 style="font-size:24px;margin:48px 0 20px;color:var(--accent1)">Mobile & Interactive Apps</h2>
+      <div class="project-grid">
         <div class="project">
-          <h3>Brain Battle - Real-time SAT Prep Game</h3>
+          <h3>Brain Battle - SAT Prep Game</h3>
           <p class="project-type">Mobile App • Gamification</p>
           <p class="project-date">Fall 2023</p>
           <p>Multiplayer React Native quiz app for SAT preparation with real-time scoring.</p>
-          
-          <h4>Features</h4>
           <ul>
-            <li>Real-time multiplayer quiz functionality</li>
-            <li>Responsive animations and interactive UI/UX</li>
-            <li>Scoring logic and leaderboard system</li>
-            <li>SAT question bank integration</li>
+            <li>Real-time multiplayer functionality</li>
+            <li>Responsive animations and UI/UX</li>
+            <li>Scoring logic and leaderboards</li>
           </ul>
-          
           <div class="tech-stack">
-            <strong>Tech:</strong> React Native, Real-time Sync, Firebase
+            <strong>Tech:</strong> React Native, Firebase
           </div>
         </div>
 
         <div class="project">
-          <h3>Agent-Based Advertisement Generator</h3>
+          <h3>Agent-Based Ad Generator</h3>
           <p class="project-type">AI/ML • Automation</p>
           <p class="project-date">Oct 2023 – March 2024</p>
           <p>GPT-4-powered backend for autonomous ad copy generation and character animation.</p>
-          
-          <h4>Features</h4>
           <ul>
-            <li>GPT-4 integration for automated ad copy generation</li>
-            <li>Character animation pipeline using Adobe Creative Suite</li>
-            <li>Streamlit interface for user interaction</li>
-            <li>Automated content generation workflow</li>
+            <li>GPT-4 integration for ad copy</li>
+            <li>Character animation pipeline</li>
+            <li>Streamlit interface</li>
           </ul>
-          
           <div class="tech-stack">
             <strong>Tech:</strong> Python, GPT-4 API, Streamlit, Adobe Creative Suite
           </div>
         </div>
+      </div>
 
+      <!-- Research & Systems -->
+      <h2 style="font-size:24px;margin:48px 0 20px;color:var(--accent1)">Research & Systems Programming</h2>
+      <div class="project-grid">
         <div class="project">
-          <h3>Cybersickness Mitigation in Virtual Reality</h3>
+          <h3>Cybersickness Mitigation in VR</h3>
           <p class="project-type">Research • VR/AR</p>
           <p class="project-date">May 2022 – August 2022</p>
-          <p>Research project to mitigate cybersickness in VR using hardware and software solutions.</p>
-          
-          <h4>Key Work</h4>
-          <ul>
-            <li>Used Unreal Engine and Arduino for VR data capture and analysis</li>
-            <li>Developed 3D-printed chin rest to stabilize participants during experiments</li>
-            <li>Conducted user studies to measure cybersickness reduction</li>
-            <li>Demonstrated hands-on experience with complex hardware/software integration</li>
-          </ul>
-          
+          <p>Research project to mitigate cybersickness using hardware and software solutions in Unreal Engine with Arduino integration.</p>
           <div class="tech-stack">
-            <strong>Tech:</strong> Unreal Engine, Arduino, 3D Printing, VR Hardware, Data Analysis
+            <strong>Tech:</strong> Unreal Engine, Arduino, 3D Printing, VR Hardware
           </div>
         </div>
 
         <div class="project">
-          <h3>Cache Memory Lab</h3>
-          <p class="project-type">Systems Programming</p>
-          <p class="project-date">Fall 2023 - CSE 361S</p>
-          <p>C-based matrix transpose simulator optimized for cache performance.</p>
-          
-          <h4>Technical Work</h4>
-          <ul>
-            <li>Implemented cache-optimized algorithms to minimize cache misses</li>
-            <li>Analyzed cache behavior with different block sizes and configurations</li>
-            <li>Applied blocking techniques for improved memory locality</li>
-          </ul>
-          
+          <h3>Systems Programming Projects</h3>
+          <p class="project-type">Academic Projects</p>
+          <p class="project-date">Fall 2023 - CSE 361S & 332S</p>
+          <p>Cache-optimized matrix operations in C and object-oriented file system simulation in C++ demonstrating systems programming fundamentals.</p>
           <div class="tech-stack">
-            <strong>Tech:</strong> C, Cache Optimization, Systems Programming
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>File System Simulation</h3>
-          <p class="project-type">Systems Programming</p>
-          <p class="project-date">Fall 2023 - CSE 332S</p>
-          <p>Command-line file system in C++ with modular, testable architecture.</p>
-          
-          <h4>Technical Work</h4>
-          <ul>
-            <li>Implemented core file system commands (ls, cd, mkdir, touch, cat)</li>
-            <li>Applied design patterns for modular, maintainable code</li>
-            <li>Built comprehensive test suite for reliability</li>
-          </ul>
-          
-          <div class="tech-stack">
-            <strong>Tech:</strong> C++, OOP, Design Patterns, Unit Testing
+            <strong>Tech:</strong> C, C++, OOP, Cache Optimization, Design Patterns
           </div>
         </div>
       </div>

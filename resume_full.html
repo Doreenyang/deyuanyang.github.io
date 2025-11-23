@@ -3,141 +3,81 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Resume (Full) — Deyuan Yang</title>
-  <meta name="description" content="Full resume for Deyuan Yang — education, work, research, community involvement." />
+  <title>Complete Resume — Doreen Yang</title>
+  <meta name="description" content="Complete resume for Doreen Yang — education, work, research, community involvement." />
   <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .pdf-viewer-container {
+      width: 100%;
+      height: calc(100vh - 80px);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .pdf-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      padding: 16px 0;
+    }
+    .pdf-viewer {
+      flex: 1;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .pdf-viewer iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    @media (max-width: 768px) {
+      .pdf-viewer-container {
+        height: calc(100vh - 120px);
+      }
+    }
+  </style>
 </head>
-</pre>
-    <article class="markdown-body resume-static">
-      <header>
-        <h1>Deyuan (Doreen) Yang</h1>
-        <p class="contact">deyuan.y@wustl.edu • (765) 712-2195 • <a href="https://www.linkedin.com/in/deyuan-yang-ba7680222/">LinkedIn</a> • <a href="https://github.com/Doreenyang">GitHub</a></p>
-      </header>
-
-      <section aria-labelledby="education">
-        <h2 id="education">Education</h2>
-        <div>
-          <h3>Washington University in St. Louis — BS in Computer Science</h3>
-          <p><strong>GPA:</strong> 3.7/4.0 • <em>Aug 2023 – May 2026 (Expected)</em></p>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none">Doreen Yang</a></div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <div class="nav-dropdown">
+          <a class="active">Resume</a>
+          <div class="nav-dropdown-content">
+            <a href="resume_cs.html">Technical</a>
+            <a href="resume_full.html" class="active">Complete</a>
+          </div>
         </div>
-        <div>
-          <h3>DePauw University — Bachelor of Arts (Computer Science & Mathematics)</h3>
-          <p><strong>Major GPA:</strong> 4.0/4.0 • <em>Aug 2020 – May 2023</em></p>
-        </div>
-        <p><strong>Relevant Coursework:</strong> Intro to CS, Data Structures, OOP, Foundations of Computation, Deep Neural Networks, Mathematics of Machine Learning, Calculus I–III, Linear Algebra, Differential Equations, Probability, Graph Theory, Analysis, Physics, and more.</p>
-      </section>
+      </nav>
+    </div>
+  </header>
 
-      <section aria-labelledby="awards">
-        <h2 id="awards">Awards & Honors</h2>
-        <p>DePauw Dean's List (multiple terms), Tech Specialist of DePauw Robotics Club, Phi Beta Kappa (Indiana Alpha), Digital Badge for CAS Student Central Independent Summer Program, and other institutional recognitions.</p>
-      </section>
+  <main class="container">
+    <div class="pdf-viewer-container">
+      <div class="pdf-actions">
+        <a href="assets/Doreen_Resume_Full Version.pdf" download class="cta" style="margin:0">Download PDF</a>
+        <a href="assets/Doreen_Resume_Full Version.pdf" target="_blank" class="cta outline" style="margin:0">Open in New Tab</a>
+      </div>
+      <div class="pdf-viewer">
+        <iframe src="assets/Doreen_Resume_Full Version.pdf" title="Doreen Yang - Full Resume"></iframe>
+      </div>
+    </div>
+  </main>
 
-      <section aria-labelledby="experience">
-        <h2 id="experience">Work & Extracurricular Experience</h2>
-
-        <article>
-          <h3>Spartan Light Metal Products Makerspace — MakerTech</h3>
-          <p><em>Aug 2024 – Present</em></p>
-          <ul>
-            <li>Assist with 3D printing, laser cutting, and electronics; mentor students and support hands-on projects.</li>
-            <li>Develop learning experiences and support the maker community.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Office for International Student Engagement — FYI Leader / Student Ambassador</h3>
-          <p><em>Oct 2023 – Present</em></p>
-          <ul>
-            <li>Mentor new international students, lead campus tours, and provide orientation support.</li>
-            <li>Design posters and communications for events; coordinate logistics.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Web Developer & Designer — Sustain-a-Plate</h3>
-          <p><em>June 2024 – Aug 2024</em></p>
-          <ul>
-            <li>Built full-stack React + FastAPI web app for customer returns and dashboards with responsive design.</li>
-            <li>Integrated PostgreSQL and real-time visualizations to streamline logistics.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Full Stack Developer — SendBack</h3>
-          <p><em>April 2024 – Aug 2024</em></p>
-          <ul>
-            <li>Built React + FastAPI app, integrated AWS S3 and DynamoDB, and deployed to AWS Elastic Beanstalk.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Mobile App Developer — ShopNFind</h3>
-          <p><em>May 2024 – June 2024</em></p>
-          <ul>
-            <li>Built React Native app with real-time inventory updates and personalized user profiles.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>LINUXJOBBER — Security & Quality Analyst</h3>
-          <p><em>May 2022 – Aug 2022</em></p>
-          <ul>
-            <li>Developed and maintained Django-based sites, authored tutorials, and performed QA on web labs.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Academic Resource Center — Tutor & STEM Guide</h3>
-          <p><em>Feb 2021 – May 2023</em></p>
-          <ul>
-            <li>Tutored quantitative reasoning and assisted students with STEM coursework and presentations.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section aria-labelledby="research">
-        <h2 id="research">Research Experience</h2>
-        <article>
-          <h3>Computing Research Association — WhoFundedIt Web App</h3>
-          <p><em>May 2023 – Aug 2023</em></p>
-          <ul>
-            <li>Designed and developed a Shiny-based web app to generate funder information for publications using Crossref API; presented a poster at the STEM Career Exploration & Symposium.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Computing Research Association — Cybersickness Assessment (VR)</h3>
-          <p><em>May 2022 – Aug 2022</em></p>
-          <ul>
-            <li>Conducted VR experiments using Unreal Engine, Arduino, and Unity; implemented 3D-printed fixtures and performed data analysis.</li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>DePauw Physics — Droplet Impact</h3>
-          <p><em>Jan 2022 – May 2023</em></p>
-          <ul>
-            <li>Built fluid chambers with 3D printing, analyzed droplet dynamics, and presented findings at a regional meeting.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section aria-labelledby="community">
-        <h2 id="community">Community Involvement</h2>
-        <ul>
-          <li>Microsoft Philanthropies TEALS — Volunteer & TA for AP CSA (Apr 2023 – Present)</li>
-          <li>Rescued Treasures — Service Coordinator (Aug 2022 – May 2023)</li>
-          <li>Greencastle Middle School — Volunteer & Service Coordinator</li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="skills">
-        <h2 id="skills">Skills</h2>
-        <ul>
-          <li><strong>Programming:</strong> Python, C++, R, Java, C, C#, HTML, CSS, JavaScript, SQL, Git</li>
-          <li><strong>Systems/Tools:</strong> Windows, Linux, Oracle, Unity, Unreal Engine, Pandas, Django, TensorFlow, Shiny</li>
-          <li><strong>Languages:</strong> English, Chinese</li>
-        </ul>
-      </section>
-
-    </article>
+  <script src="assets/main.js"></script>
+  <div id="chat-root"></div>
+  <script src="assets/chat.js"></script>
+</body>
+</html>
