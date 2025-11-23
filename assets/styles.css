@@ -79,6 +79,26 @@ nav a{color:var(--muted);margin-left:18px;text-decoration:none}
 .section{padding:36px 0}
 .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .project{background:rgba(255,255,255,0.02);padding:16px;border-radius:8px}
+.project h3{
+  margin:0 0 4px 0;
+  font-size:20px;
+}
+.project-type{
+  color:var(--accent2);
+  font-size:13px;
+  margin:0 0 4px 0;
+  font-weight:600;
+}
+.project-date{
+  color:var(--muted);
+  font-size:12px;
+  margin:0 0 12px 0;
+  font-style:italic;
+}
+.project h4{
+  margin:12px 0 8px 0;
+  font-size:16px;
+}
 .site-footer{padding:28px 0;color:var(--muted);text-align:center}
 
 /* resume page */
