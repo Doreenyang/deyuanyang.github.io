@@ -1,90 +1,159 @@
 {
-  "name": "Doreen (Deyuan) Yang",
+  "name": "Deyuan Yang (Doreen)",
   "title": "Computer Science Student & Software Engineer",
   "email": "doreenyang02@gmail.com",
   "linkedin": "https://www.linkedin.com/in/deyuan-yang-ba7680222/",
   "github": "https://github.com/Doreenyang",
   
   "education": {
-    "degree": "B.S. in Computer Science",
+    "degree": "B.S. & M.S. in Computer Science",
     "school": "Washington University in St. Louis",
-    "gpa": "3.9/4.0",
+    "gpa": "3.7/4.0",
     "expected_graduation": "May 2026",
-    "relevant_coursework": "Data Structures, Algorithms, Machine Learning, Database Systems, Software Engineering"
+    "previous_school": "DePauw University - BA in Pre-Engineering & Mathematics (4.0/4.0 GPA)",
+    "relevant_coursework": "Data Structures, Algorithms, Machine Learning, Database Systems, Software Engineering, Deep Neural Networks"
   },
 
   "skills": {
-    "languages": ["Python", "JavaScript", "TypeScript", "C++", "SQL", "HTML/CSS"],
-    "frameworks": ["FastAPI", "React", "Node.js", "Express", "PyTorch", "TensorFlow"],
-    "tools": ["PostgreSQL", "AWS (S3, Lambda, CloudWatch)", "Docker", "Git", "Redis"],
-    "specialties": ["Backend systems", "Analytics pipelines", "ML tooling", "Product engineering"]
+    "languages": ["Python", "JavaScript", "TypeScript", "C++", "SQL", "R", "Java", "C", "HTML/CSS"],
+    "frameworks": ["FastAPI", "React", "React Native", "Node.js", "Django", "PyTorch", "TensorFlow"],
+    "tools": ["PostgreSQL", "DynamoDB", "AWS (S3, Lambda, Elastic Beanstalk)", "Docker", "Git", "Tableau", "PowerBI"],
+    "specialties": ["Backend systems", "Product analytics", "ML tooling", "A/B testing", "Mobile development", "Full-stack development"]
   },
 
   "experience": [
     {
-      "role": "Full Stack Developer",
-      "project": "Sendback",
-      "duration": "2023-2024",
-      "description": "Product analytics platform",
+      "role": "Progressive Web App Developer",
+      "company": "Livelihood Impact Fund",
+      "duration": "Aug 2025 - Oct 2025",
+      "description": "PWA for tender management",
       "achievements": [
-        "Built event pipeline handling 10,000+ events with FastAPI and PostgreSQL",
-        "Integrated AWS services (S3, Lambda, CloudWatch) for scalable data processing",
-        "Designed A/B testing framework for product experiments",
-        "Improved authentication flows and user session management",
-        "Built React dashboard for real-time analytics visualization"
+        "Developed progressive web application for tender management serving 100+ buyers and suppliers",
+        "Integrated OpenAI API to automate data extraction from tender documents, reducing manual entry time by ~30%",
+        "Streamlined CRM workflows by implementing Freshworks integration"
       ],
-      "tech_stack": ["Python", "FastAPI", "PostgreSQL", "React", "AWS", "Redis"]
+      "tech_stack": ["Quasar", "Node.js", "OpenAI API", "Freshworks"]
     },
     {
       "role": "Full Stack Developer",
-      "project": "Sustain-a-Plate",
-      "duration": "2023",
+      "company": "SendBack",
+      "duration": "Apr 2024 - Aug 2025",
+      "description": "Product analytics platform",
+      "achievements": [
+        "Built analytics pipeline powering 10,000+ user return-tracking events using FastAPI, PostgreSQL, DynamoDB, and AWS S3",
+        "Designed event-tracking schema enabling analysis of user flows and repeat usage patterns",
+        "Improved auth success rate by 24% by analyzing funnels (OTP, Google OAuth, password resets) and optimizing flows",
+        "Integrated Amazon order-sync APIs and created dashboards to reduce sync errors by 35%",
+        "Built A/B testing framework for UI updates and measured product metrics"
+      ],
+      "tech_stack": ["Python", "FastAPI", "PostgreSQL", "DynamoDB", "AWS S3", "React"]
+    },
+    {
+      "role": "Web Developer & Product Analytics",
+      "company": "Sustain-a-Plate",
+      "duration": "Jun 2024 - Aug 2024",
       "description": "Food waste tracking platform",
       "achievements": [
-        "Built interactive dashboard for waste tracking and visualization",
-        "Optimized backend queries, reducing response time by 40%",
-        "Increased user engagement by 31% through UX improvements",
-        "Implemented real-time data synchronization"
+        "Developed interactive dashboard with time-based filters and visualizations for waste-tracking data",
+        "Led metric design and analyzed 12 months of product data; improvements increased dashboard engagement by 31%",
+        "Built backend with FastAPI + PostgreSQL and optimized large-data queries by 40%"
       ],
-      "tech_stack": ["React", "Node.js", "Express", "PostgreSQL"]
+      "tech_stack": ["React", "FastAPI", "PostgreSQL"]
+    },
+    {
+      "role": "Mobile App Developer",
+      "company": "ShopNFind",
+      "duration": "Jan 2024 - May 2024",
+      "description": "Real-time product analytics",
+      "achievements": [
+        "Developed in-store navigation and real-time inventory updates; increased search-to-add-to-cart conversion by 18%",
+        "Created funnel metrics (view → locate → add → checkout) to guide API throttling and UI optimizations"
+      ],
+      "tech_stack": ["React Native", "API Integration"]
     }
   ],
 
   "projects": [
     {
-      "name": "LSTM Multivariate Time-Series Analyzer",
-      "description": "Production-grade ML pipeline for forecasting",
+      "name": "RemindMe",
+      "description": "AI-powered memory coach",
+      "award": "First Prize - 2-minute-video elevator pitch contest",
+      "link": "https://doreenyang.github.io/LifeFrame/",
       "details": [
-        "Built training pipeline with PyTorch for multivariate time-series forecasting",
-        "Implemented comprehensive diagnostics and evaluation metrics",
-        "Created visualization tools for model performance analysis",
-        "Optimized hyperparameter tuning with grid search",
-        "Deployed pipeline with Docker for reproducibility"
+        "AI-powered React app to capture and jog personal memories with voice-driven prompts",
+        "Voice-driven memory prompts and reminders using Web Speech API",
+        "AI-powered guided memory coach for personalized interactions",
+        "Local storage for privacy-focused data management"
       ],
-      "tech_stack": ["Python", "PyTorch", "Pandas", "NumPy", "Matplotlib", "Docker"]
+      "tech_stack": ["React 18", "Vite", "Tailwind CSS", "Web Speech API", "localStorage", "GitHub Actions"]
     },
     {
-      "name": "EcoTag",
-      "description": "Sustainability product scanner",
+      "name": "TravelAI",
+      "description": "AI-powered travel planning platform",
+      "award": "Semi-finalist at WashU Skandalaris Venture Competition",
+      "link": "https://www.ideabounce.com/idea?recordId=recMUWmJncnUsNZHJ",
       "details": [
-        "Semi-finalist at WashU Skandalaris Venture Competition",
-        "Helps users make eco-conscious purchasing decisions",
-        "Scans product barcodes and provides sustainability ratings",
-        "Built mobile-responsive web application"
+        "Smart AI assistant for personalized travel recommendations",
+        "Curated itineraries featuring hidden gems and local favorites",
+        "Dynamic plan adjustments based on weather and local events",
+        "Consolidated platform for flights, accommodations, and activities"
       ],
-      "tech_stack": ["React", "Node.js", "MongoDB", "External APIs"]
+      "tech_stack": ["AI/ML", "Real-time Data Processing", "Smart Assistant", "Full Stack"]
+    },
+    {
+      "name": "Synaptrack Mobile App",
+      "description": "Neuroscience research app for Dr. Jacob Greenberg Lab",
+      "details": [
+        "Developed Android version using React Native, expanding potential participant base by ~50%",
+        "Unified iOS and Android codebases by integrating the original Xcode project",
+        "Reduced future maintenance overhead through cross-platform architecture"
+      ],
+      "tech_stack": ["React Native", "Xcode", "Android Studio"]
+    },
+    {
+      "name": "D10: AI Agent for Architectural Drawing",
+      "description": "AI-powered system for automated object detection on architectural plans",
+      "details": [
+        "Fine-tuned LLM to automate object detection, improving analysis speed by 90%",
+        "Built Streamlit GUI to visualize AI outputs and enhance user interaction",
+        "Automated bid estimation pipeline with email integration"
+      ],
+      "tech_stack": ["Python", "LLM Fine-tuning", "Streamlit", "Computer Vision"]
+    },
+    {
+      "name": "WhoFundedIt",
+      "description": "AI research tool using NLP",
+      "details": [
+        "Web application using NLP and AI to extract and summarize funding sources from academic papers",
+        "NLP-based extraction of funding information from research papers",
+        "Automated backend data processing pipelines for scalable data ingestion"
+      ],
+      "tech_stack": ["Python", "NLP", "AI/ML", "Backend Pipelines"]
+    },
+    {
+      "name": "CSE 3300 Course Development - AI Integration",
+      "description": "Rapid Prototype Development and Creative Programming course design",
+      "details": [
+        "Designed curriculum integrating AI tools into rapid prototyping and creative programming coursework",
+        "Developed comprehensive guides for MCP (Model Context Protocol) server implementation",
+        "Created educational materials teaching students how to effectively use AI APIs in programming",
+        "Built hands-on tutorials for integrating AI into development workflows",
+        "Focused on practical applications: using AI for code generation, debugging, and rapid prototyping"
+      ],
+      "tech_stack": ["AI API Integration", "MCP Server", "Educational Design", "Creative Programming"]
     }
   ],
 
-  "about": "I'm a Computer Science student at Washington University in St. Louis with a passion for building scalable systems and data-driven products. I specialize in backend development, analytics pipelines, and ML tooling. I enjoy solving complex problems and shipping features that create measurable impact. Currently seeking full-time opportunities in product engineering, backend systems, or ML infrastructure.",
+  "about": "I'm a Computer Science student at Washington University in St. Louis pursuing both B.S. and M.S. degrees, with a passion for building scalable systems and data-driven products. I specialize in full-stack development, product analytics, and AI/ML applications. I've built analytics pipelines handling 10,000+ events, won first prize for my AI-powered memory coach app (RemindMe), and was a semi-finalist at the Skandalaris Venture Competition with TravelAI. I enjoy solving complex problems and shipping features that create measurable impact. Currently seeking full-time opportunities in product engineering, backend systems, or ML infrastructure.",
 
   "interests": [
     "Product analytics and A/B testing",
     "Backend system design and optimization",
-    "Machine learning infrastructure",
+    "AI/ML applications and infrastructure",
+    "Mobile development with React Native",
     "Data pipelines and ETL",
     "Full-stack web development"
   ],
 
-  "career_goals": "Looking for roles in product engineering, analytics infrastructure, or ML tooling where I can build systems that help teams make data-driven decisions and ship better products."
+  "career_goals": "Looking for roles in product engineering, full-stack development, analytics infrastructure, or ML tooling where I can build systems that help teams make data-driven decisions and ship better products."
 }
