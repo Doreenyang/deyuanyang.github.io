@@ -8,14 +8,14 @@
   // optional toggle
   const themeToggle = qs('#themeToggle');
   if(themeToggle){
-    themeToggle.checked = storedTheme === 'dark';
+    themeToggle.checked = storedSiteTheme === 'dark';
     themeToggle.addEventListener('change', e=>{
       if(e.target.checked){
         document.documentElement.classList.add('dark');
-        localStorage.setItem('theme','dark')
+        localStorage.setItem('site-theme','dark')
       } else {
         document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme','light')
+        localStorage.setItem('site-theme','light')
       }
     })
   }
@@ -27,8 +27,13 @@
     const params = new URLSearchParams(window.location.search);
     const type = params.get('type') || 'cs';
     const mdFile = (type === 'full') ? 'resume_full_version.md' : 'resume.md';
+    
+    // Show loading state
+    container.setAttribute('aria-busy', 'true');
+    container.innerHTML = '<p class="loading">Loading resume...</p>';
+    
     fetch(mdFile).then(r=>{
-      if(!r.ok) throw new Error('Failed to fetch');
+      if(!r.ok) throw new Error(`Failed to fetch ${mdFile}: ${r.status}`);
       return r.text();
     }).then(markdown=>{
       // render
@@ -37,15 +42,19 @@
       } else {
         container.textContent = markdown;
       }
-      if(window.hljs) hljs.highlightAll();
+      container.removeAttribute('aria-busy');
+      if(window.hljs) {
+        try { hljs.highlightAll(); } catch(e) { console.warn('Highlight failed', e); }
+      }
       const downloadBtn = qs('#download-btn');
       if(downloadBtn){
         downloadBtn.href = mdFile;
-        downloadBtn.setAttribute('download','');
+        downloadBtn.setAttribute('download', `resume_${type}.md`);
       }
     }).catch(err=>{
-      container.textContent = 'Could not load resume.';
-      console.error(err);
+      container.innerHTML = '<p class="error">Could not load resume. Please try again later.</p>';
+      container.removeAttribute('aria-busy');
+      console.error('Resume load error:', err);
     })
   }
 
@@ -64,7 +73,7 @@
               obs.unobserve(e.target);
             }
           })
-        }, {threshold: 0.12});
+        }, {threshold: 0.12, rootMargin: '50px'});
         els.forEach(el=>{
           // ensure starting state
           el.classList.add('reveal');
@@ -81,33 +90,64 @@
 
 /* Creative UI: typewriter, palette chooser, and tilt on project cards */
 (function(){
-  // Typewriter simple loop
+  // Typewriter simple loop with cleanup
   const phrases = ['build scalable analytics.', 'design delightful UX.', 'ship reliable backend systems.', 'experiment with ML models.'];
-  let pIndex = 0, cIndex = 0, typing = true;
+  let pIndex = 0, cIndex = 0, typing = true, timeoutId = null;
   const el = document.getElementById('typewriter');
   function tick(){
-    if(!el) return;
+    if(!el || !document.body.contains(el)) {
+      if(timeoutId) clearTimeout(timeoutId);
+      return;
+    }
     const current = phrases[pIndex];
     if(typing){
       el.textContent = current.slice(0, cIndex+1);
       cIndex++;
-      if(cIndex === current.length){ typing = false; setTimeout(tick, 1200); return }
+      if(cIndex === current.length){ typing = false; timeoutId = setTimeout(tick, 1200); return }
     } else {
       el.textContent = current.slice(0, cIndex-1);
       cIndex--;
       if(cIndex === 0){ typing = true; pIndex = (pIndex+1) % phrases.length }
     }
-    setTimeout(tick, typing ? 60 : 36);
+    timeoutId = setTimeout(tick, typing ? 60 : 36);
   }
-  document.addEventListener('DOMContentLoaded', ()=>{ setTimeout(tick,400) });
+  document.addEventListener('DOMContentLoaded', ()=>{ if(el) timeoutId = setTimeout(tick,400) });
 
-  // Palette chooser
+  // Palette chooser with keyboard navigation
   document.addEventListener('DOMContentLoaded', ()=>{
     const paletteBtn = document.getElementById('paletteBtn');
     const paletteMenu = document.getElementById('paletteMenu');
     if(!paletteBtn || !paletteMenu) return;
 
-    paletteBtn.addEventListener('click', ()=>{ paletteMenu.hidden = !paletteMenu.hidden; });
+    function closeMenu(){
+      paletteMenu.hidden = true;
+      paletteBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu(){
+      paletteMenu.hidden = false;
+      paletteBtn.setAttribute('aria-expanded', 'true');
+      paletteMenu.querySelector('[data-theme]')?.focus();
+    }
+
+    paletteBtn.addEventListener('click', ()=>{ 
+      paletteMenu.hidden ? openMenu() : closeMenu();
+    });
+
+    // Escape key to close
+    paletteMenu.addEventListener('keydown', e=>{
+      if(e.key === 'Escape'){
+        closeMenu();
+        paletteBtn.focus();
+      }
+    });
+
+    // Click outside to close
+    document.addEventListener('click', e=>{
+      if(!paletteBtn.contains(e.target) && !paletteMenu.contains(e.target)){
+        closeMenu();
+      }
+    });
 
     // click a palette option
     paletteMenu.addEventListener('click', e=>{
@@ -121,7 +161,7 @@
 
       // persist (empty string means default/dark)
       localStorage.setItem('site-theme', theme);
-      paletteMenu.hidden = true;
+      closeMenu();
 
       // update active state for buttons
       Array.from(paletteMenu.querySelectorAll('[data-theme]')).forEach(b=> b.setAttribute('aria-pressed', b === opt ? 'true' : 'false'));
@@ -134,21 +174,34 @@
     if(initial) initial.setAttribute('aria-pressed','true');
   });
 
-  // project tilt handlers
+  // project tilt handlers (optimized with RAF)
   const projects = document.querySelectorAll('.project');
-  projects.forEach(p=>{
-    const inner = document.createElement('div');
-    inner.className = 'project-inner';
-    while(p.firstChild) inner.appendChild(p.firstChild);
-    p.appendChild(inner);
-    p.addEventListener('mousemove', e=>{
-      const rect = p.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      inner.style.transform = `rotateX(${(-y*6).toFixed(2)}deg) rotateY(${(x*8).toFixed(2)}deg) translateZ(6px)`;
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  if(!prefersReduced){
+    projects.forEach(p=>{
+      const inner = document.createElement('div');
+      inner.className = 'project-inner';
+      while(p.firstChild) inner.appendChild(p.firstChild);
+      p.appendChild(inner);
+      
+      let rafId = null;
+      p.addEventListener('mousemove', e=>{
+        if(rafId) return;
+        rafId = requestAnimationFrame(()=>{
+          const rect = p.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+          inner.style.transform = `rotateX(${(-y*6).toFixed(2)}deg) rotateY(${(x*8).toFixed(2)}deg) translateZ(6px)`;
+          rafId = null;
+        });
+      });
+      p.addEventListener('mouseleave', ()=>{ 
+        if(rafId) cancelAnimationFrame(rafId);
+        inner.style.transform = '';
+      });
     });
-    p.addEventListener('mouseleave', ()=>{ inner.style.transform = '' });
-  });
+  }
 })();
 
 

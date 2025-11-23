@@ -1,0 +1,90 @@
+{
+  "name": "Doreen (Deyuan) Yang",
+  "title": "Computer Science Student & Software Engineer",
+  "email": "doreenyang02@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/deyuan-yang-ba7680222/",
+  "github": "https://github.com/Doreenyang",
+  
+  "education": {
+    "degree": "B.S. in Computer Science",
+    "school": "Washington University in St. Louis",
+    "gpa": "3.9/4.0",
+    "expected_graduation": "May 2026",
+    "relevant_coursework": "Data Structures, Algorithms, Machine Learning, Database Systems, Software Engineering"
+  },
+
+  "skills": {
+    "languages": ["Python", "JavaScript", "TypeScript", "C++", "SQL", "HTML/CSS"],
+    "frameworks": ["FastAPI", "React", "Node.js", "Express", "PyTorch", "TensorFlow"],
+    "tools": ["PostgreSQL", "AWS (S3, Lambda, CloudWatch)", "Docker", "Git", "Redis"],
+    "specialties": ["Backend systems", "Analytics pipelines", "ML tooling", "Product engineering"]
+  },
+
+  "experience": [
+    {
+      "role": "Full Stack Developer",
+      "project": "Sendback",
+      "duration": "2023-2024",
+      "description": "Product analytics platform",
+      "achievements": [
+        "Built event pipeline handling 10,000+ events with FastAPI and PostgreSQL",
+        "Integrated AWS services (S3, Lambda, CloudWatch) for scalable data processing",
+        "Designed A/B testing framework for product experiments",
+        "Improved authentication flows and user session management",
+        "Built React dashboard for real-time analytics visualization"
+      ],
+      "tech_stack": ["Python", "FastAPI", "PostgreSQL", "React", "AWS", "Redis"]
+    },
+    {
+      "role": "Full Stack Developer",
+      "project": "Sustain-a-Plate",
+      "duration": "2023",
+      "description": "Food waste tracking platform",
+      "achievements": [
+        "Built interactive dashboard for waste tracking and visualization",
+        "Optimized backend queries, reducing response time by 40%",
+        "Increased user engagement by 31% through UX improvements",
+        "Implemented real-time data synchronization"
+      ],
+      "tech_stack": ["React", "Node.js", "Express", "PostgreSQL"]
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "LSTM Multivariate Time-Series Analyzer",
+      "description": "Production-grade ML pipeline for forecasting",
+      "details": [
+        "Built training pipeline with PyTorch for multivariate time-series forecasting",
+        "Implemented comprehensive diagnostics and evaluation metrics",
+        "Created visualization tools for model performance analysis",
+        "Optimized hyperparameter tuning with grid search",
+        "Deployed pipeline with Docker for reproducibility"
+      ],
+      "tech_stack": ["Python", "PyTorch", "Pandas", "NumPy", "Matplotlib", "Docker"]
+    },
+    {
+      "name": "EcoTag",
+      "description": "Sustainability product scanner",
+      "details": [
+        "Semi-finalist at WashU Skandalaris Venture Competition",
+        "Helps users make eco-conscious purchasing decisions",
+        "Scans product barcodes and provides sustainability ratings",
+        "Built mobile-responsive web application"
+      ],
+      "tech_stack": ["React", "Node.js", "MongoDB", "External APIs"]
+    }
+  ],
+
+  "about": "I'm a Computer Science student at Washington University in St. Louis with a passion for building scalable systems and data-driven products. I specialize in backend development, analytics pipelines, and ML tooling. I enjoy solving complex problems and shipping features that create measurable impact. Currently seeking full-time opportunities in product engineering, backend systems, or ML infrastructure.",
+
+  "interests": [
+    "Product analytics and A/B testing",
+    "Backend system design and optimization",
+    "Machine learning infrastructure",
+    "Data pipelines and ETL",
+    "Full-stack web development"
+  ],
+
+  "career_goals": "Looking for roles in product engineering, analytics infrastructure, or ML tooling where I can build systems that help teams make data-driven decisions and ship better products."
+}
