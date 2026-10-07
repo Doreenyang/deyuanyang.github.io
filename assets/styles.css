@@ -975,3 +975,8 @@ nav a.active{color:var(--accent1)}
   nav{background:#fff}
   nav a:hover,nav a.active{background:#eef2ff;color:var(--accent1)}
 }
+.about-grid img{height:auto}
+
+/* Space between a card's content and its tech tags */
+.case > .chips,.xp > .chips{margin-top:20px}
+.band h1{margin:0 0 10px;font-size:28px;letter-spacing:-0.4px}

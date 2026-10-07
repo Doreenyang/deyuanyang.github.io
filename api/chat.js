@@ -46,28 +46,62 @@ GitHub: ${personalContext.github}
 `;
 
 
+// The widget calls this endpoint from the same site, so no CORS headers are sent;
+// browsers on other sites are blocked, and requests carrying a foreign Origin are rejected.
+const ALLOWED_ORIGINS = [
+  'https://deyuanyang.vercel.app',
+  'https://deyuanyang-github-io.vercel.app',
+  'http://localhost:3000',
+  'http://localhost:8000'
+];
+
+const MAX_MESSAGE_CHARS = 1000;
+const MAX_HISTORY = 10;
+
+// Best-effort per-IP limit; state lives only as long as a warm function instance
+const RATE_LIMIT = 20;
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+const hits = new Map();
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  const recent = (hits.get(ip) || []).filter(t => now - t < RATE_WINDOW_MS);
+  recent.push(now);
+  hits.set(ip, recent);
+  if (hits.size > 5000) hits.clear();
+  return recent.length > RATE_LIMIT;
+}
+
 // Main handler function
 module.exports = async function handler(req, res) {
-  // CORS headers
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
-  res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
-
-  if (req.method === 'OPTIONS') {
-    res.status(200).end();
-    return;
-  }
-
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  const origin = req.headers.origin;
+  if (origin && !ALLOWED_ORIGINS.includes(origin)) {
+    return res.status(403).json({ error: 'Forbidden' });
+  }
+
+  const ip = (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || req.socket?.remoteAddress || 'unknown';
+  if (isRateLimited(ip)) {
+    return res.status(429).json({ error: 'Too many messages. Please try again later or email doreenyang02@gmail.com.' });
+  }
+
   try {
-    const { message, history = [] } = req.body;
+    const { message } = req.body || {};
+    const history = Array.isArray(req.body?.history)
+      ? req.body.history
+          .filter(m => (m?.role === 'user' || m?.role === 'assistant') && typeof m.content === 'string')
+          .slice(-MAX_HISTORY)
+          .map(m => ({ role: m.role, content: m.content.slice(0, MAX_MESSAGE_CHARS) }))
+      : [];
 
     if (!message || typeof message !== 'string') {
       return res.status(400).json({ error: 'Message is required' });
+    }
+    if (message.length > MAX_MESSAGE_CHARS) {
+      return res.status(400).json({ error: `Please keep messages under ${MAX_MESSAGE_CHARS} characters.` });
     }
 
     // Initialize OpenAI (do it here to avoid module issues)
@@ -81,7 +115,7 @@ module.exports = async function handler(req, res) {
         model: 'gpt-4o-mini',
         messages: [
           { role: 'system', content: SYSTEM_PROMPT },
-          ...history.map(msg => ({ role: msg.role, content: msg.content })),
+          ...history,
           { role: 'user', content: message }
         ],
         temperature: 0.7,

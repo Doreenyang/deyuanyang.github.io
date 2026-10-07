@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 
-# Sitemaps
-Sitemap: https://doreenyang.github.io/sitemap.xml
+Sitemap: https://deyuanyang.vercel.app/sitemap.xml

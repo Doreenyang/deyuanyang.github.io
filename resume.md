@@ -1,5 +1,5 @@
 	                       DEYUAN YANG
-doreenyang02@gmail.com | github.com/Doreenyang | linkedin.com/in/deyuan-yang-ba7680222 | (765)-712-2195
+doreenyang02@gmail.com | github.com/Doreenyang | linkedin.com/in/deyuan-yang-ba7680222
 
 EDUCATION
 

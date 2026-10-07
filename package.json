@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Doreen Yang's portfolio with AI chat integration",
   "scripts": {
-    "dev": "python -m http.server 8000",
+    "dev": "npx serve . -l 8000",
     "deploy": "vercel --prod"
   },
   "dependencies": {},

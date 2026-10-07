@@ -3,8 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Resume — Deyuan Yang</title>
-  <meta name="description" content="Deyuan Yang — View my Technical or Complete resume." />
+  <title>Resume — Deyuan Yang, Software Engineer</title>
+  <meta name="description" content="Download the resume of Deyuan Yang, a software engineer with experience in AI applications, backend systems, full-stack development, and data." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="author" content="Deyuan Yang" />
+  <link rel="canonical" href="https://deyuanyang.vercel.app/resume" />
   <link rel="stylesheet" href="assets/styles.css">
   <style>
     .resume-tabs {
@@ -100,24 +106,69 @@
       }
     }
   </style>
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Deyuan Yang" />
+  <meta property="og:url" content="https://deyuanyang.vercel.app/resume" />
+  <meta property="og:title" content="Resume — Deyuan Yang, Software Engineer" />
+  <meta property="og:description" content="Download the resume of Deyuan Yang, a software engineer with experience in AI applications, backend systems, full-stack development, and data." />
+  <meta property="og:image" content="https://deyuanyang.vercel.app/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Resume — Deyuan Yang, Software Engineer" />
+  <meta name="twitter:description" content="Download the resume of Deyuan Yang, a software engineer with experience in AI applications, backend systems, full-stack development, and data." />
+  <meta name="twitter:image" content="https://deyuanyang.vercel.app/assets/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "url": "https://deyuanyang.vercel.app/resume",
+        "name": "Resume — Deyuan Yang, Software Engineer",
+        "isPartOf": {
+          "@id": "https://deyuanyang.vercel.app/#website"
+        },
+        "about": {
+          "@id": "https://deyuanyang.vercel.app/#person"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://deyuanyang.vercel.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resume",
+            "item": "https://deyuanyang.vercel.app/resume"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none">Deyuan Yang</a></div>
+      <div class="brand"><a href="/" style="color:inherit;text-decoration:none">Deyuan Yang</a></div>
       <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <nav id="mainNav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="experience.html">Experience</a>
-        <a href="projects.html">Projects</a>
-        <a href="skills.html">Skills</a>
-        <a href="contact.html">Contact</a>
-        <a href="resume.html" class="active">Resume</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/experience">Experience</a>
+        <a href="/projects">Projects</a>
+        <a href="/skills">Skills</a>
+        <a href="/contact">Contact</a>
+        <a href="/resume" class="active">Resume</a>
       </nav>
     </div>
   </header>
@@ -126,7 +177,7 @@
     <div class="band" style="margin-bottom:32px">
       <div>
         <span class="eyebrow">Resume</span>
-        <h2>Interested in my background?</h2>
+        <h1>Interested in my background?</h1>
         <p>Download my latest resume for a concise overview of my software engineering, AI, research, and full-stack experience.</p>
         <a href="assets/Deyuan_Resume_CS.pdf" download class="cta">Download Resume</a>
       </div>
@@ -135,33 +186,14 @@
         <ul class="chips lg"><li>Software Engineering</li><li>AI Engineering</li><li>Backend Engineering</li><li>Full-Stack Development</li><li>Data Engineering</li><li>Machine Learning Systems</li></ul>
       </div>
     </div>
-    <p style="color: var(--muted); margin-bottom: 16px; font-size: 14px;">Choose between my technical or complete resume</p>
 
-    <div class="resume-tabs">
-      <button class="resume-tab active" data-tab="technical">Technical</button>
-      <button class="resume-tab" data-tab="complete">Complete</button>
-    </div>
-
-    <div id="technical" class="tab-content active">
+    <div id="technical">
       <div class="pdf-viewer-container">
         <div class="pdf-actions">
-          <a href="assets/Deyuan_Resume_CS.pdf" download class="cta" style="margin:0">Download PDF</a>
           <a href="assets/Deyuan_Resume_CS.pdf" target="_blank" class="cta outline" style="margin:0">Open in New Tab</a>
         </div>
         <div class="pdf-viewer">
           <iframe src="assets/Deyuan_Resume_CS.pdf" title="Deyuan Yang - Technical Resume"></iframe>
-        </div>
-      </div>
-    </div>
-
-    <div id="complete" class="tab-content">
-      <div class="pdf-viewer-container">
-        <div class="pdf-actions">
-          <a href="assets/Doreen_Resume_Full Version.pdf" download class="cta" style="margin:0">Download PDF</a>
-          <a href="assets/Doreen_Resume_Full Version.pdf" target="_blank" class="cta outline" style="margin:0">Open in New Tab</a>
-        </div>
-        <div class="pdf-viewer">
-          <iframe src="assets/Doreen_Resume_Full Version.pdf" title="Deyuan Yang - Complete Resume"></iframe>
         </div>
       </div>
     </div>
@@ -179,7 +211,7 @@
           <a href="https://github.com/Doreenyang" target="_blank" rel="noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/deyuan-yang-ba7680222/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="mailto:doreenyang02@gmail.com">Email</a>
-          <a href="resume.html">Resume</a>
+          <a href="/resume">Resume</a>
         </nav>
       </div>
       <div class="footer-copy">© 2026 Deyuan Yang</div>
@@ -187,26 +219,8 @@
   </footer>
 
   <script src="assets/main.js"></script>
-  <script>
-    // Tab switching functionality
-    const tabs = document.querySelectorAll('.resume-tab');
-    const tabContents = document.querySelectorAll('.tab-content');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const targetTab = tab.dataset.tab;
-        
-        // Remove active class from all tabs and contents
-        tabs.forEach(t => t.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
-        
-        // Add active class to clicked tab and corresponding content
-        tab.classList.add('active');
-        document.getElementById(targetTab).classList.add('active');
-      });
-    });
-  </script>
   <div id="chat-root"></div>
   <script src="assets/chat.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

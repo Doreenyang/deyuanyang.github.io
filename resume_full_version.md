@@ -1,5 +1,5 @@
 DEYUAN YANG
-deyuan.y@wustl.edu | (765)-712-2195 | https://www.linkedin.com/in/deyuan-yang-ba7680222/ | https://github.com/Doreenyang
+deyuan.y@wustl.edu | https://www.linkedin.com/in/deyuan-yang-ba7680222/ | https://github.com/Doreenyang
 
 EDUCATION
 Washington University in St. Louis, St. Louis, MO    GPA: 3.7 / 4.0                                                     August 2023 – May 2026
