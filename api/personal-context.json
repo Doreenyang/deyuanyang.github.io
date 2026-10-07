@@ -1,10 +1,9 @@
 {
   "name": "Deyuan Yang (Doreen)",
-  "title": "Computer Science Student & Software Engineer",
+  "title": "Software Engineer · AI Engineer · Full-Stack Developer",
   "email": "doreenyang02@gmail.com",
   "linkedin": "https://www.linkedin.com/in/deyuan-yang-ba7680222/",
   "github": "https://github.com/Doreenyang",
-  
   "education": {
     "degree": "B.S. & M.S. in Computer Science",
     "school": "Washington University in St. Louis",
@@ -13,14 +12,45 @@
     "previous_school": "DePauw University - BA in Pre-Engineering & Mathematics (4.0/4.0 GPA)",
     "relevant_coursework": "Data Structures, Algorithms, Machine Learning, Database Systems, Software Engineering, Deep Neural Networks"
   },
-
   "skills": {
-    "languages": ["Python", "JavaScript", "TypeScript", "C++", "SQL", "R", "Java", "C", "HTML/CSS"],
-    "frameworks": ["FastAPI", "React", "React Native", "Node.js", "Django", "PyTorch", "TensorFlow"],
-    "tools": ["PostgreSQL", "DynamoDB", "AWS (S3, Lambda, Elastic Beanstalk)", "Docker", "Git", "Tableau", "PowerBI"],
-    "specialties": ["Backend systems", "Product analytics", "ML tooling", "A/B testing", "Mobile development", "Full-stack development"]
+    "languages": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "C++",
+      "SQL",
+      "R",
+      "Java",
+      "C",
+      "HTML/CSS"
+    ],
+    "frameworks": [
+      "FastAPI",
+      "React",
+      "React Native",
+      "Node.js",
+      "Django",
+      "PyTorch",
+      "TensorFlow"
+    ],
+    "tools": [
+      "PostgreSQL",
+      "DynamoDB",
+      "AWS (S3, Lambda, Elastic Beanstalk)",
+      "Docker",
+      "Git",
+      "Tableau",
+      "PowerBI"
+    ],
+    "specialties": [
+      "Backend systems",
+      "Product analytics",
+      "ML tooling",
+      "A/B testing",
+      "Mobile development",
+      "Full-stack development"
+    ]
   },
-
   "experience": [
     {
       "role": "MakerTech",
@@ -34,22 +64,63 @@
         "Mentor students on design for manufacturing and prototyping best practices",
         "Maintain and operate makerspace equipment including 3D printers, laser cutters, and scanners"
       ],
-      "tech_stack": ["3D Printing", "Laser Cutting", "3D Scanning", "Electronics", "Workshop Teaching"]
+      "tech_stack": [
+        "3D Printing",
+        "Laser Cutting",
+        "3D Scanning",
+        "Electronics",
+        "Workshop Teaching"
+      ]
     },
     {
-      "role": "Progressive Web App Developer",
+      "role": "Software Engineer / Full-Stack Developer",
       "company": "Livelihood Impact Fund",
-      "duration": "Aug 2025 - Oct 2025",
-      "description": "PWA for tender management",
+      "duration": "2025 - Present",
+      "description": "Production tender-management platform with AI document processing",
       "achievements": [
-        "Developed progressive web application for tender management serving 100+ buyers and suppliers",
-        "Integrated OpenAI API to automate data extraction from tender documents, reducing manual entry time by ~30%",
-        "Streamlined CRM workflows by implementing Freshworks integration"
+        "Designed and developed the tender-management web application from backend APIs through the user interface, serving 100+ users",
+        "Built an AI-powered document processing pipeline using OpenAI APIs to extract structured information from unstructured tender documents",
+        "Automated manual data-entry workflows, reducing manual tender data entry by ~30%",
+        "Built supplier registration, tender processing, matching, and procurement data workflows plus an admin portal",
+        "Deployed and maintained the application infrastructure and iterated based on stakeholder feedback"
       ],
-      "tech_stack": ["Quasar", "Node.js", "OpenAI API", "Freshworks"]
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "OpenAI API",
+        "AWS",
+        "Docker"
+      ]
     },
     {
-      "role": "Full Stack Developer",
+      "role": "Software Engineer / Research Developer",
+      "company": "SynapTrack · Washington University Research",
+      "duration": "2026 - Present",
+      "description": "Smartphone-based digital biomarker platform for remote assessment of cervical spondylotic myelopathy",
+      "achievements": [
+        "Developed mobile assessments for gait, dexterity, sensory function, questionnaires, and patient-reported outcomes",
+        "Built and maintained React Native functionality across Android and iOS",
+        "Developed backend functionality using FastAPI and Azure Functions with Cosmos DB",
+        "Integrated Health Connect and Apple Health, and built data sync/upload workflows",
+        "Debugged production issues involving health-data sync, rate limiting, and device-specific behavior",
+        "Worked with researchers and clinicians to translate research requirements into usable software"
+      ],
+      "tech_stack": [
+        "React Native",
+        "TypeScript",
+        "Python",
+        "FastAPI",
+        "Azure Functions",
+        "Cosmos DB",
+        "Health Connect",
+        "Apple Health"
+      ]
+    },
+    {
+      "role": "Founding Engineer / Full-Stack Developer",
       "company": "SendBack",
       "duration": "Apr 2024 - Aug 2025",
       "description": "Product analytics platform",
@@ -60,7 +131,14 @@
         "Integrated Amazon order-sync APIs and created dashboards to reduce sync errors by 35%",
         "Built A/B testing framework for UI updates and measured product metrics"
       ],
-      "tech_stack": ["Python", "FastAPI", "PostgreSQL", "DynamoDB", "AWS S3", "React"]
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "DynamoDB",
+        "AWS S3",
+        "React"
+      ]
     },
     {
       "role": "Web Developer & Product Analytics",
@@ -72,7 +150,11 @@
         "Led metric design and analyzed 12 months of product data; improvements increased dashboard engagement by 31%",
         "Built backend with FastAPI + PostgreSQL and optimized large-data queries by 40%"
       ],
-      "tech_stack": ["React", "FastAPI", "PostgreSQL"]
+      "tech_stack": [
+        "React",
+        "FastAPI",
+        "PostgreSQL"
+      ]
     },
     {
       "role": "Mobile App Developer",
@@ -83,10 +165,12 @@
         "Developed in-store navigation and real-time inventory updates; increased search-to-add-to-cart conversion by 18%",
         "Created funnel metrics (view → locate → add → checkout) to guide API throttling and UI optimizations"
       ],
-      "tech_stack": ["React Native", "API Integration"]
+      "tech_stack": [
+        "React Native",
+        "API Integration"
+      ]
     }
   ],
-
   "projects": [
     {
       "name": "RemindMe",
@@ -99,7 +183,14 @@
         "AI-powered guided memory coach for personalized interactions",
         "Local storage for privacy-focused data management"
       ],
-      "tech_stack": ["React 18", "Vite", "Tailwind CSS", "Web Speech API", "localStorage", "GitHub Actions"]
+      "tech_stack": [
+        "React 18",
+        "Vite",
+        "Tailwind CSS",
+        "Web Speech API",
+        "localStorage",
+        "GitHub Actions"
+      ]
     },
     {
       "name": "TravelAI",
@@ -112,17 +203,29 @@
         "Dynamic plan adjustments based on weather and local events",
         "Consolidated platform for flights, accommodations, and activities"
       ],
-      "tech_stack": ["AI/ML", "Real-time Data Processing", "Smart Assistant", "Full Stack"]
+      "tech_stack": [
+        "AI/ML",
+        "Real-time Data Processing",
+        "Smart Assistant",
+        "Full Stack"
+      ]
     },
     {
-      "name": "Synaptrack Mobile App",
-      "description": "Neuroscience research app for Dr. Jacob Greenberg Lab",
+      "name": "SynapTrack",
+      "description": "Smartphone-based digital biomarker platform for remote assessment of cervical spondylotic myelopathy",
       "details": [
-        "Developed Android version using React Native, expanding potential participant base by ~50%",
-        "Unified iOS and Android codebases by integrating the original Xcode project",
-        "Reduced future maintenance overhead through cross-platform architecture"
+        "React Native app on Android and iOS with gait, dexterity, and sensory assessments and patient questionnaires",
+        "FastAPI backend on Azure Functions with Cosmos DB",
+        "Health Connect and Apple Health integration with data synchronization workflows"
       ],
-      "tech_stack": ["React Native", "Xcode", "Android Studio"]
+      "tech_stack": [
+        "React Native",
+        "TypeScript",
+        "Python",
+        "FastAPI",
+        "Azure",
+        "Cosmos DB"
+      ]
     },
     {
       "name": "D10: AI Agent for Architectural Drawing",
@@ -132,7 +235,12 @@
         "Built Streamlit GUI to visualize AI outputs and enhance user interaction",
         "Automated bid estimation pipeline with email integration"
       ],
-      "tech_stack": ["Python", "LLM Fine-tuning", "Streamlit", "Computer Vision"]
+      "tech_stack": [
+        "Python",
+        "LLM Fine-tuning",
+        "Streamlit",
+        "Computer Vision"
+      ]
     },
     {
       "name": "WhoFundedIt",
@@ -142,7 +250,12 @@
         "NLP-based extraction of funding information from research papers",
         "Automated backend data processing pipelines for scalable data ingestion"
       ],
-      "tech_stack": ["Python", "NLP", "AI/ML", "Backend Pipelines"]
+      "tech_stack": [
+        "Python",
+        "NLP",
+        "AI/ML",
+        "Backend Pipelines"
+      ]
     },
     {
       "name": "CSE 3300 Course Development - AI Integration",
@@ -154,20 +267,22 @@
         "Built hands-on tutorials for integrating AI into development workflows",
         "Focused on practical applications: using AI for code generation, debugging, and rapid prototyping"
       ],
-      "tech_stack": ["AI API Integration", "MCP Server", "Educational Design", "Creative Programming"]
+      "tech_stack": [
+        "AI API Integration",
+        "MCP Server",
+        "Educational Design",
+        "Creative Programming"
+      ]
     }
   ],
-
-  "about": "I'm a Computer Science student at Washington University in St. Louis pursuing both B.S. and M.S. degrees, with a passion for building scalable systems and data-driven products. I specialize in full-stack development, product analytics, and AI/ML applications. I've built analytics pipelines handling 10,000+ events, won first prize for my AI-powered memory coach app (RemindMe), and was a semi-finalist at the Skandalaris Venture Competition with TravelAI. I enjoy solving complex problems and shipping features that create measurable impact. Currently seeking full-time opportunities in product engineering, backend systems, or ML infrastructure.",
-
+  "about": "I'm a software engineer building AI-powered products, backend systems, and full-stack applications. I've built production software across AI/LLMs, backend engineering, cloud infrastructure, mobile applications, and data systems: an AI-powered tender-management platform at Livelihood Impact Fund (100+ users, ~30% less manual data entry), SynapTrack clinical research software at Washington University, and the product and analytics stack at SendBack (10,000+ events, 24% better auth success). I studied Computer Science (B.S. & M.S.) at Washington University in St. Louis. I enjoy taking ambiguous problems from idea to deployment and building software that people actually use. I'm open to Software Engineering, AI Engineering, and Data Engineering opportunities.",
   "interests": [
-    "Product analytics and A/B testing",
-    "Backend system design and optimization",
-    "AI/ML applications and infrastructure",
-    "Mobile development with React Native",
-    "Data pipelines and ETL",
-    "Full-stack web development"
+    "AI engineering and LLM applications",
+    "AI agents and automation",
+    "Backend engineering and system design",
+    "Full-stack and mobile development",
+    "Data engineering and analytics",
+    "Machine learning systems and developer tools"
   ],
-
-  "career_goals": "Looking for roles in product engineering, full-stack development, analytics infrastructure, or ML tooling where I can build systems that help teams make data-driven decisions and ship better products."
+  "career_goals": "Open to Software Engineering, AI Engineering, and Data Engineering roles working on challenging software problems, AI-powered applications, backend systems, and data-intensive products."
 }

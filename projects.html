@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projects | Doreen Yang Portfolio</title>
-  <meta name="description" content="View Doreen Yang's portfolio featuring 12+ projects including Synaptrack mobile app, D10 AI detection system, WhoFundedIt research tool, and full-stack applications showcasing React Native, AI/ML, and systems programming." />
-  <meta name="keywords" content="Doreen Yang Projects, Machine Learning Portfolio, LSTM Stock Prediction, Web Development Projects, PyTorch, React, FastAPI" />
+  <title>Projects | Deyuan Yang</title>
+  <meta name="description" content="Projects by Deyuan Yang: an AI-powered tender intelligence platform, SynapTrack digital biomarkers, SendBack, RemindMe (1st prize), TravelAI (SVC semi-finalist), and more." />
+  <meta name="keywords" content="Deyuan Yang Projects, LLM Document Extraction, Tender Intelligence, SynapTrack, Digital Biomarkers, SendBack, RemindMe, TravelAI, React Native, FastAPI" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="canonical" href="https://doreenyang.github.io/projects.html" />
   <link rel="stylesheet" href="assets/styles.css">
@@ -13,7 +13,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none">Deyuan Yang</a></div>
+      <div class="brand"><a href="index.html">Deyuan Yang</a></div>
       <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -22,8 +22,9 @@
       <nav id="mainNav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="work.html">Work</a>
+        <a href="experience.html">Experience</a>
         <a href="projects.html" class="active">Projects</a>
+        <a href="skills.html">Skills</a>
         <a href="contact.html">Contact</a>
         <a href="resume.html">Resume</a>
       </nav>
@@ -33,269 +34,187 @@
   <main>
     <section class="container section page-content">
       <h1>Projects</h1>
-      <p class="lead" style="margin-bottom:32px">Selected work spanning mobile development, AI/ML, full-stack applications, and systems programming.</p>
-      
-      <!-- Featured Projects -->
-      <h2 style="font-size:24px;margin-bottom:20px;color:var(--accent1)">Featured Projects</h2>
-      <div class="project-grid featured-grid">
-        <div class="project featured-project">
-          <span class="project-badge">🏆 First Prize</span>
-          <h3><a href="https://doreenyang.github.io/LifeFrame/" target="_blank" style="color:inherit;text-decoration:none">RemindMe</a></h3>
-          <p class="project-type">AI-Powered Memory Coach</p>
-          <p class="project-date">2025</p>
-          <p>AI-powered React app to capture and jog personal memories with voice-driven prompts, reminders, and a guided memory coach. First prize winner of 2-minute-video elevator pitch contest.</p>
-          
-          <h4>Key Features</h4>
-          <ul>
-            <li>Voice-driven memory prompts and reminders using Web Speech API</li>
-            <li>AI-powered guided memory coach for personalized interactions</li>
-            <li>Local storage for privacy-focused data management</li>
-            <li>Responsive design with Tailwind CSS</li>
-          </ul>
-          
-          <div class="tech-stack">
-            <strong>Tech:</strong> React 18, Vite, Tailwind CSS, Web Speech API, localStorage, GitHub Actions
-          </div>
-        </div>
+      <p class="lead">Five flagship projects — production AI systems, clinical research software, a startup product, and award-winning prototypes.</p>
 
-        <div class="project featured-project">
-          <span class="project-badge">⭐ SVC Semi-Finalist</span>
-          <h3><a href="https://www.ideabounce.com/idea?recordId=recMUWmJncnUsNZHJ" target="_blank" style="color:inherit;text-decoration:none">TravelAI</a></h3>
-          <p class="project-type">AI Travel Assistant</p>
-          <p class="project-date">2024</p>
-          <p>AI-powered travel planning platform that personalizes recommendations, curates itineraries with hidden gems, and dynamically adjusts plans based on real-time data like weather and local events. Semi-finalist at WashU Skandalaris Venture Competition.</p>
-          
-          <h4>Key Features</h4>
-          <ul>
-            <li>Smart AI assistant for personalized travel recommendations</li>
-            <li>Curated itineraries featuring hidden gems and local favorites</li>
-            <li>Dynamic plan adjustments based on weather and local events</li>
-            <li>Consolidated platform for flights, accommodations, and activities</li>
-          </ul>
-          
-          <div class="tech-stack">
-            <strong>Tech:</strong> AI/ML, Real-time Data Processing, Smart Assistant, Full Stack
+      <!-- 01 LIF -->
+      <article class="case" id="lif">
+        <span class="case-num">01</span>
+        <h2>LIF Tender Intelligence Platform</h2>
+        <p class="tags">AI · Full Stack · Automation · Production</p>
+        <p class="intro">A production platform for managing tenders, suppliers, procurement workflows, and administrative operations.</p>
+        <div class="case-body">
+          <div>
+            <h3>The Problem</h3>
+            <p>Tender information often arrives as unstructured documents and requires significant manual processing before it can be used by procurement teams.</p>
+            <h3>The Solution</h3>
+            <p>I built an end-to-end workflow that uses LLMs to extract structured information from tender documents and move that information into the application's procurement workflow.</p>
+            <h3>Highlights</h3>
+            <ul class="bullets">
+              <li>Production application with 100+ users</li>
+              <li>OpenAI-powered extraction and automated structured data generation</li>
+              <li>Supplier registration workflows</li>
+              <li>Backend APIs and database</li>
+              <li>Admin portal and analytics</li>
+              <li>Cloud deployment</li>
+            </ul>
+            <p class="result">~30% reduction in manual tender data entry.</p>
+          </div>
+          <div>
+            <h3>System</h3>
+            <ol class="pipeline" aria-label="Tender processing pipeline">
+              <li>Tender Documents</li>
+              <li>Document Processing</li>
+              <li class="hl">LLM Extraction</li>
+              <li>Structured Tender Data</li>
+              <li>Supplier / Requirement Matching</li>
+              <li>Web Application &amp; CRM Workflows</li>
+            </ol>
           </div>
         </div>
+        <ul class="chips"><li>Python</li><li>FastAPI</li><li>React</li><li>TypeScript</li><li>OpenAI API</li><li>AWS</li><li>PostgreSQL</li><li>REST APIs</li></ul>
+      </article>
 
-        <div class="project featured-project">
-          <span class="project-badge">⭐ Featured</span>
-          <h3>Synaptrack Mobile App</h3>
-          <p class="project-type">Mobile Development • Research</p>
-          <p class="project-date">Fall 2025</p>
-          <p>Neuroscience research app for Dr. Jacob Greenberg Lab, expanding participant accessibility across platforms.</p>
-          
-          <h4>Key Achievements</h4>
-          <ul>
-            <li>Developed Android version using React Native, expanding potential participant base by <strong>~50%</strong></li>
-            <li>Unified iOS and Android codebases by integrating the original Xcode project</li>
-            <li>Reduced future maintenance overhead through cross-platform architecture</li>
-          </ul>
-          
-          <div class="tech-stack">
-            <strong>Tech:</strong> React Native, Xcode, Android Studio
+      <!-- 02 SynapTrack -->
+      <article class="case" id="synaptrack">
+        <span class="case-num">02</span>
+        <h2>SynapTrack</h2>
+        <p class="tags">Digital Biomarkers · Mobile · Healthcare Research</p>
+        <p class="intro">A smartphone-based digital biomarker platform designed to support remote assessment of cervical spondylotic myelopathy.</p>
+        <div class="case-body">
+          <div>
+            <h3>What It Does</h3>
+            <p>The application collects structured behavioral and functional measurements through smartphone-based assessments, questionnaires, and health data.</p>
+            <h3>Why It Matters</h3>
+            <p>The project shows how software can turn clinical research protocols into usable mobile experiences while collecting structured data remotely.</p>
+          </div>
+          <div>
+            <h3>My Work</h3>
+            <ul class="bullets">
+              <li>React Native app on Android and iOS</li>
+              <li>Gait and dexterity assessments</li>
+              <li>Sensory testing and patient questionnaires</li>
+              <li>FastAPI backend on Azure Functions with Cosmos DB</li>
+              <li>Health Connect and Apple Health integration</li>
+              <li>Data synchronization and research data workflows</li>
+            </ul>
           </div>
         </div>
+        <ul class="chips"><li>React Native</li><li>TypeScript</li><li>Python</li><li>FastAPI</li><li>Azure</li><li>Cosmos DB</li><li>Android</li><li>iOS</li><li>Health Connect</li><li>Apple Health</li></ul>
+      </article>
+
+      <!-- 03 SendBack -->
+      <article class="case" id="sendback">
+        <span class="case-num">03</span>
+        <h2>SendBack</h2>
+        <p class="tags">Startup · Full Stack · Cloud · Analytics</p>
+        <p class="intro">A web and mobile product designed to simplify product returns.</p>
+        <div class="case-body">
+          <div>
+            <h3>My Role</h3>
+            <p>As a founding engineer, I worked across the product and technical stack rather than focusing on a single layer.</p>
+            <h3>Result</h3>
+            <p>The analytics system processed more than 10,000 events and helped identify an authentication funnel issue that was contributing to failed sign-ins.</p>
+            <p class="result">Improved authentication success by ~24%.</p>
+          </div>
+          <div>
+            <h3>Built</h3>
+            <ul class="bullets">
+              <li>Web application and React Native mobile app</li>
+              <li>Backend APIs and authentication</li>
+              <li>Database systems and AWS infrastructure</li>
+              <li>Analytics pipelines and product metrics</li>
+              <li>User workflows</li>
+            </ul>
+          </div>
+        </div>
+        <ul class="chips"><li>React</li><li>React Native</li><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>DynamoDB</li><li>AWS</li></ul>
+      </article>
+
+      <!-- 04 RemindMe -->
+      <article class="case" id="remindme">
+        <span class="case-num">04</span>
+        <h2><a href="https://doreenyang.github.io/LifeFrame/" target="_blank" rel="noopener">RemindMe ↗</a></h2>
+        <p class="tags">AI-Powered Memory Coach</p>
+        <p class="intro">An AI-powered application that helps users capture and revisit personal memories through voice-driven interactions, reminders, and guided prompts.</p>
+        <div class="case-body">
+          <div>
+            <h3>Features</h3>
+            <ul class="bullets">
+              <li>Voice-based interaction</li>
+              <li>AI-generated prompts and guided memory conversations</li>
+              <li>Memory capture and personalized reminders</li>
+              <li>Responsive web interface</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Award</h3>
+            <p class="result">🏆 1st Prize — 2-Minute Video Elevator Pitch Competition</p>
+          </div>
+        </div>
+        <ul class="chips"><li>React</li><li>Vite</li><li>Tailwind CSS</li><li>Web Speech API</li><li>GitHub Actions</li></ul>
+      </article>
+
+      <!-- 05 TravelAI -->
+      <article class="case" id="travelai">
+        <span class="case-num">05</span>
+        <h2><a href="https://www.ideabounce.com/idea?recordId=recMUWmJncnUsNZHJ" target="_blank" rel="noopener">TravelAI ↗</a></h2>
+        <p class="tags">AI Travel Assistant · SVC Semi-Finalist</p>
+        <p class="intro">An AI-powered travel planning platform that creates personalized itineraries and adapts recommendations based on changing conditions.</p>
+        <div class="case-body">
+          <div>
+            <h3>Features</h3>
+            <ul class="bullets">
+              <li>Personalized travel recommendations</li>
+              <li>AI itinerary generation and hidden-gem discovery</li>
+              <li>Dynamic itinerary adjustments from real-time information</li>
+              <li>Weather-aware planning and local event integration</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Recognition</h3>
+            <p class="result">⭐ Semi-Finalist — WashU Skandalaris Venture Competition</p>
+          </div>
+        </div>
+        <ul class="chips"><li>AI</li><li>LLMs</li><li>Full-Stack Development</li><li>APIs</li><li>Real-Time Data</li></ul>
+      </article>
+    </section>
+
+    <section class="container section" aria-labelledby="more-h">
+      <div class="section-head">
+        <span class="eyebrow">Archive</span>
+        <h2 id="more-h">More Projects</h2>
       </div>
-
-      <!-- AI/ML & Computer Vision -->
-      <h2 style="font-size:24px;margin:48px 0 20px;color:var(--accent1)">AI/ML & Computer Vision</h2>
-      <div class="project-grid">
-        <div class="project">
-          <h3>D10: AI Agent for Architectural Drawing</h3>
-          <p class="project-type">AI/ML • Computer Vision</p>
-          <p class="project-date">Summer 2025</p>
-          <p>AI-powered system for automated object detection on architectural plans with interactive GUI.</p>
-          
-          <h4>Key Achievements</h4>
-          <ul>
-            <li>Fine-tuned LLM to automate object detection, improving analysis speed by <strong>90%</strong></li>
-            <li>Built Streamlit GUI to visualize AI outputs and enhance user interaction</li>
-            <li>Automated bid estimation pipeline with email integration</li>
-          </ul>
-          
-          <div class="tech-stack">
-            <strong>Tech:</strong> Python, LLM Fine-tuning, Streamlit, Computer Vision
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>WhoFundedIt - AI Research Tool</h3>
-          <p class="project-type">Web App • NLP</p>
-          <p class="project-date">May 2023 – August 2023</p>
-          <p>Web application using NLP and AI to extract and summarize funding sources from academic papers.</p>
-          
-          <h4>Features</h4>
-          <ul>
-            <li>NLP-based extraction of funding information from research papers</li>
-            <li>Automated backend data processing pipelines for scalable data ingestion</li>
-            <li>AI-powered summarization of funding sources</li>
-          </ul>
-          
-          <div class="tech-stack">
-            <strong>Tech:</strong> Python, NLP, AI/ML, Backend Pipelines
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>Agent-Based Ad Generator</h3>
-          <p class="project-type">AI/ML • Automation</p>
-          <p class="project-date">Oct 2023 – March 2024</p>
-          <p>GPT-4-powered backend for autonomous ad copy generation and character animation.</p>
-          <ul>
-            <li>GPT-4 integration for ad copy</li>
-            <li>Character animation pipeline</li>
-            <li>Streamlit interface</li>
-          </ul>
-          <div class="tech-stack">
-            <strong>Tech:</strong> Python, GPT-4 API, Streamlit, Adobe Creative Suite
-          </div>
-        </div>
-      </div>
-
-      <!-- Full Stack & Web Development -->
-      <h2 style="font-size:24px;margin:48px 0 20px;color:var(--accent1)">Full Stack & Web Development</h2>
-      <div class="project-grid">
-        <div class="project">
-          <h3>Seasonal Trade-Up Platform</h3>
-          <p class="project-type">Full Stack • E-commerce</p>
-          <p class="project-date">Spring 2024 - CSE 437</p>
-          <p>Full-stack e-commerce platform with cloud-native deployment and CI/CD automation.</p>
-          <ul>
-            <li>eBay API integration for product listings</li>
-            <li>Docker/Kubernetes deployment</li>
-            <li>CI/CD pipelines for automated testing</li>
-          </ul>
-          <div class="tech-stack">
-            <strong>Tech:</strong> React, Node.js, Docker, Kubernetes, eBay API
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>Job Match Platform</h3>
-          <p class="project-type">Web App • AI Recommendations</p>
-          <p class="project-date">Spring 2024 - CSE 503</p>
-          <p>Django web app with intelligent matching between job seekers and employers.</p>
-          <ul>
-            <li>Resume parser with skill extraction</li>
-            <li>Smart job/candidate recommendations</li>
-            <li>Real-time messaging system</li>
-          </ul>
-          <div class="tech-stack">
-            <strong>Tech:</strong> Django, Python, NLP, PostgreSQL
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>Element - Shopify Optimization</h3>
-          <p class="project-type">E-commerce • UX Design</p>
-          <p class="project-date">Fall 2024</p>
-          <p>Enhanced e-commerce site performance through UI/UX improvements and SEO optimization.</p>
-          <ul>
-            <li>Improved traffic and conversion rates</li>
-            <li>Google Analytics integration</li>
-            <li>A/B tested design variations</li>
-          </ul>
-          <div class="tech-stack">
-            <strong>Tech:</strong> Shopify, Google Analytics, SEO
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>No-Code Portfolio Generator</h3>
-          <p class="project-type">Web Development</p>
-          <p class="project-date">Spring 2024 - CSE 204</p>
-          <p>Transforms uploaded resumes into customizable portfolios with theme selection and HTML export.</p>
-          <ul>
-            <li>PDF/image upload with text extraction</li>
-            <li>Theme/template selection</li>
-            <li>HTML export and link sharing</li>
-          </ul>
-          <div class="tech-stack">
-            <strong>Tech:</strong> HTML, CSS, JavaScript, PDF.js
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile & Game Development -->
-      <h2 style="font-size:24px;margin:48px 0 20px;color:var(--accent1)">Mobile & Interactive Apps</h2>
-      <div class="project-grid">
-        <div class="project">
-          <h3>Brain Battle - SAT Prep Game</h3>
-          <p class="project-type">Mobile App • Gamification</p>
-          <p class="project-date">Fall 2023</p>
-          <p>Multiplayer React Native quiz app for SAT preparation with real-time scoring.</p>
-          <ul>
-            <li>Real-time multiplayer functionality</li>
-            <li>Responsive animations and UI/UX</li>
-            <li>Scoring logic and leaderboards</li>
-          </ul>
-          <div class="tech-stack">
-            <strong>Tech:</strong> React Native, Firebase
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>Agent-Based Ad Generator</h3>
-          <p class="project-type">AI/ML • Automation</p>
-          <p class="project-date">Oct 2023 – March 2024</p>
-          <p>GPT-4-powered backend for autonomous ad copy generation and character animation.</p>
-          <ul>
-            <li>GPT-4 integration for ad copy</li>
-            <li>Character animation pipeline</li>
-            <li>Streamlit interface</li>
-          </ul>
-          <div class="tech-stack">
-            <strong>Tech:</strong> Python, GPT-4 API, Streamlit, Adobe Creative Suite
-          </div>
-        </div>
-      </div>
-
-      <!-- Research & Systems -->
-      <h2 style="font-size:24px;margin:48px 0 20px;color:var(--accent1)">Research & Education</h2>
-      <div class="project-grid">
-        <div class="project">
-          <h3>CSE 3300 Course Development - AI Integration</h3>
-          <p class="project-type">Educational Design • AI Integration</p>
-          <p class="project-date">2024-2025</p>
-          <p>Designed curriculum for Rapid Prototype Development and Creative Programming course, integrating AI tools into coursework.</p>
-          <h4>Key Contributions</h4>
-          <ul>
-            <li>Developed comprehensive guides for MCP (Model Context Protocol) server implementation</li>
-            <li>Created educational materials teaching students how to effectively use AI APIs in programming</li>
-            <li>Built hands-on tutorials for integrating AI into development workflows</li>
-            <li>Focused on practical applications: AI for code generation, debugging, and rapid prototyping</li>
-          </ul>
-          <div class="tech-stack">
-            <strong>Tech:</strong> AI API Integration, MCP Server, Educational Design, Creative Programming
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>Cybersickness Mitigation in VR</h3>
-          <p class="project-type">Research • VR/AR</p>
-          <p class="project-date">May 2022 – August 2022</p>
-          <p>Research project to mitigate cybersickness using hardware and software solutions in Unreal Engine with Arduino integration.</p>
-          <div class="tech-stack">
-            <strong>Tech:</strong> Unreal Engine, Arduino, 3D Printing, VR Hardware
-          </div>
-        </div>
-
-        <div class="project">
-          <h3>Systems Programming Projects</h3>
-          <p class="project-type">Academic Projects</p>
-          <p class="project-date">Fall 2023 - CSE 361S & 332S</p>
-          <p>Cache-optimized matrix operations in C and object-oriented file system simulation in C++ demonstrating systems programming fundamentals.</p>
-          <div class="tech-stack">
-            <strong>Tech:</strong> C, C++, OOP, Cache Optimization, Design Patterns
-          </div>
-        </div>
+      <div class="mini-grid">
+        <div class="mini"><p class="tags">AI · Computer Vision</p><h3>D10: AI Agent for Architectural Drawing</h3><p>Fine-tuned an LLM for object detection on architectural plans, speeding analysis by 90%, with a Streamlit GUI and automated bid estimation.</p></div>
+        <div class="mini"><p class="tags">Web App · NLP</p><h3>WhoFundedIt</h3><p>NLP tool that extracts and summarizes funding sources from academic papers, backed by automated ingestion pipelines.</p></div>
+        <div class="mini"><p class="tags">AI · Automation</p><h3>Agent-Based Ad Generator</h3><p>GPT-4-powered backend for autonomous ad copy generation and character animation, with a Streamlit interface.</p></div>
+        <div class="mini"><p class="tags">Web App · Recommendations</p><h3>Job Match Platform</h3><p>Django app with resume parsing, skill extraction, job/candidate recommendations, and real-time messaging.</p></div>
+        <div class="mini"><p class="tags">Full Stack · Cloud</p><h3>Seasonal Trade-Up Platform</h3><p>E-commerce platform with eBay API integration, Docker/Kubernetes deployment, and CI/CD pipelines.</p></div>
+        <div class="mini"><p class="tags">AI · Education</p><h3>CSE 3300 AI Curriculum</h3><p>Course materials teaching students to build with AI APIs and MCP servers for rapid prototyping.</p></div>
+        <div class="mini"><p class="tags">Mobile · Gamification</p><h3>Brain Battle</h3><p>Multiplayer React Native SAT-prep quiz app with real-time scoring and leaderboards on Firebase.</p></div>
+        <div class="mini"><p class="tags">Systems</p><h3>Systems Programming</h3><p>Cache-optimized matrix operations in C and an object-oriented file system simulation in C++.</p></div>
+        <div class="mini"><p class="tags">Research · VR</p><h3>Cybersickness Mitigation in VR</h3><p>Hardware and software approaches to reduce VR cybersickness using Unreal Engine and Arduino.</p></div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">© 2025 Doreen (Deyuan) Yang — Built with HTML, CSS & JS • <a href="resume.html?type=cs">Resume</a></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-name">Deyuan Yang</div>
+          <div class="footer-title">Software Engineer · AI Engineer · Full-Stack Developer</div>
+          <div class="footer-tag">Building useful software with AI, data, and modern engineering.</div>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://github.com/Doreenyang" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/deyuan-yang-ba7680222/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:doreenyang02@gmail.com">Email</a>
+          <a href="resume.html">Resume</a>
+        </nav>
+      </div>
+      <div class="footer-copy">© 2026 Deyuan Yang</div>
+    </div>
   </footer>
   <script src="assets/main.js"></script>
   <div id="chat-root"></div>

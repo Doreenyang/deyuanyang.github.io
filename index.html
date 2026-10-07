@@ -3,29 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Deyuan Yang — Software Engineer | Full Stack Developer</title>
-  <meta name="description" content="Deyuan Yang (Doreen) is a Computer Science student at Washington University specializing in full-stack development, ML infrastructure, and data engineering. View portfolio, projects, and contact information." />
-  <meta name="keywords" content="Deyuan Yang, Doreen Yang, Software Engineer, Full Stack Developer, Computer Science, WashU, Python, JavaScript, React, FastAPI, Machine Learning" />
-  <meta name="author" content="Doreen Yang" />
+  <title>Deyuan Yang — Software Engineer · AI Engineer · Full-Stack Developer</title>
+  <meta name="description" content="Deyuan Yang is a software engineer building AI-powered products, backend systems, and full-stack applications — from LLM document processing to clinical research software." />
+  <meta name="keywords" content="Deyuan Yang, Doreen Yang, Software Engineer, AI Engineer, Full-Stack Developer, Backend Engineer, LLM Applications, Python, FastAPI, React, React Native, AWS, Azure" />
+  <meta name="author" content="Deyuan Yang" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="canonical" href="https://doreenyang.github.io/" />
   <link rel="stylesheet" href="assets/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://doreenyang.github.io/" />
-  <meta property="og:title" content="Deyuan Yang — Software Engineer | Full Stack Developer" />
-  <meta property="og:description" content="Computer Science student at WashU specializing in full-stack development, ML infrastructure, and data engineering." />
+  <meta property="og:title" content="Deyuan Yang — Software Engineer · AI Engineer · Full-Stack Developer" />
+  <meta property="og:description" content="I build AI-powered products, backend systems, and full-stack applications that turn complex problems into useful software." />
   <meta property="og:image" content="https://doreenyang.github.io/assets/898A0136.JPG" />
-  
+
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://doreenyang.github.io/" />
-  <meta property="twitter:title" content="Deyuan Yang — Software Engineer | Full Stack Developer" />
-  <meta property="twitter:description" content="Computer Science student at WashU specializing in full-stack development, ML infrastructure, and data engineering." />
+  <meta property="twitter:title" content="Deyuan Yang — Software Engineer · AI Engineer · Full-Stack Developer" />
+  <meta property="twitter:description" content="I build AI-powered products, backend systems, and full-stack applications that turn complex problems into useful software." />
   <meta property="twitter:image" content="https://doreenyang.github.io/assets/898A0136.JPG" />
-  
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -36,15 +35,11 @@
     "url": "https://doreenyang.github.io",
     "image": "https://doreenyang.github.io/assets/898A0136.JPG",
     "jobTitle": "Software Engineer",
-    "worksFor": {
-      "@type": "EducationalOrganization",
-      "name": "Washington University in St. Louis"
-    },
-    "alumniOf": "Washington University in St. Louis",
-    "knowsAbout": ["Software Development", "Machine Learning", "Data Engineering", "Full Stack Development", "Python", "JavaScript", "React", "FastAPI"],
+    "alumniOf": ["Washington University in St. Louis", "DePauw University"],
+    "knowsAbout": ["Software Engineering", "AI Engineering", "LLM Applications", "Backend Engineering", "Full-Stack Development", "Data Engineering", "Python", "TypeScript", "React", "FastAPI"],
     "sameAs": [
-      "https://github.com/doreenyang",
-      "https://linkedin.com/in/doreenyang"
+      "https://github.com/Doreenyang",
+      "https://www.linkedin.com/in/deyuan-yang-ba7680222/"
     ]
   }
   </script>
@@ -52,7 +47,7 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">Deyuan Yang</div>
+      <div class="brand"><a href="index.html">Deyuan Yang</a></div>
       <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
@@ -61,8 +56,9 @@
       <nav id="mainNav">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
-        <a href="work.html">Work</a>
+        <a href="experience.html">Experience</a>
         <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
         <a href="contact.html">Contact</a>
         <a href="resume.html">Resume</a>
       </nav>
@@ -70,20 +66,29 @@
   </header>
 
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="hero-bg" aria-hidden="true">
         <svg viewBox="0 0 800 400" preserveAspectRatio="none" class="hero-blob"><defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="var(--accent2)"/><stop offset="1" stop-color="var(--accent1)"/></linearGradient></defs><path fill="url(#g1)" d="M0 100 C150 200 350 0 800 100 L800 400 L0 400 Z" opacity="0.12"></path></svg>
       </div>
       <div class="container hero-grid">
         <div class="hero-text">
-          <h1>Hi — I'm Deyuan Yang (Doreen)</h1>
-          <p class="lead">Computer Science student and full-stack builder. I build analytics pipelines, web apps, and ML tooling for production.</p>
-          <p class="lead small">I <span id="typewriter" aria-live="polite"></span></p>
+          <span class="eyebrow">Software Engineer · AI Engineer · Full-Stack Developer</span>
+          <h1>Hi, I'm Deyuan Yang.</h1>
+          <p class="hero-title">Software Engineer building AI-powered products, backend systems, and full-stack applications.</p>
+          <p class="lead">I build production software across AI/LLMs, backend engineering, cloud infrastructure, mobile applications, and data systems. I enjoy taking ambiguous problems from idea to deployment and building software that people actually use.</p>
+          <ul class="hero-proof" aria-label="Highlights">
+            <li>100+ users</li>
+            <li>10,000+ events</li>
+            <li>AI-powered automation</li>
+            <li>Clinical research software</li>
+          </ul>
           <div class="cta-row">
-            <a class="cta" href="resume.html">View Resume</a>
-            <a class="cta outline" href="work.html">See My Work</a>
-            <a class="cta ghost" href="contact.html">Get in Touch</a>
+            <a class="cta" href="projects.html">View My Work</a>
+            <a class="cta outline" href="resume.html">View Resume</a>
+            <a class="cta ghost" href="contact.html">Get In Touch</a>
           </div>
+          <p class="hero-meta">Based in the United States · <strong>Open to Software Engineering, AI Engineering, and Data Engineering opportunities</strong></p>
         </div>
         <div class="hero-card">
           <div class="card-inner">
@@ -92,105 +97,224 @@
                 <img class="avatar-img" src="assets/898A0136.JPG" alt="Deyuan Yang">
               </figure>
               <div class="quick-heading">
-                <h3>Quick Stats</h3>
-                <div class="muted">Computer Science • Full-stack • ML & Analytics</div>
+                <h3>Currently focused on</h3>
               </div>
             </div>
-            <ul class="stats-list">
-              <li><span class="stat-key">Languages</span><span class="stat-val">Python, JS, TS, C++, Java</span></li>
-              <li><span class="stat-key">Tools</span><span class="stat-val">FastAPI, React, PostgreSQL, AWS</span></li>
-              <li><span class="stat-key">Focus</span><span class="stat-val">Product analytics & backend</span></li>
+            <ul class="focus-list">
+              <li><strong>AI Engineering</strong><span>LLM applications, document intelligence, automation, and intelligent workflows.</span></li>
+              <li><strong>Software Engineering</strong><span>Full-stack products, backend systems, APIs, databases, and cloud infrastructure.</span></li>
+              <li><strong>Data Engineering</strong><span>Data pipelines, analytics, data modeling, and production data systems.</span></li>
             </ul>
             <div class="links">
-              <a href="https://github.com/Doreenyang" target="_blank">GitHub</a>
-              <a href="https://www.linkedin.com/in/deyuan-yang-ba7680222/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/Doreenyang" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://www.linkedin.com/in/deyuan-yang-ba7680222/" target="_blank" rel="noopener">LinkedIn</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="container section">
-      <h2>About</h2>
-      <p>I design and ship reliable web applications and data pipelines with a focus on measurable product impact. I enjoy building dashboards and ML tooling that help teams make decisions quickly.</p>
+    <!-- Proof / Impact -->
+    <section class="container section" aria-labelledby="impact-h">
+      <div class="section-head">
+        <span class="eyebrow">By the numbers</span>
+        <h2 id="impact-h">Impact</h2>
+      </div>
+      <div class="stats-band">
+        <div class="stat"><span class="num">100+</span><span class="label">Users supported by production software</span></div>
+        <div class="stat"><span class="num">10,000+</span><span class="label">Events processed through product analytics infrastructure</span></div>
+        <div class="stat"><span class="num">30%</span><span class="label">Reduction in manual tender data entry</span></div>
+        <div class="stat"><span class="num">24%</span><span class="label">Improvement from authentication funnel analysis</span></div>
+        <div class="stat"><span class="num">1st Prize</span><span class="label">2-Minute Video Elevator Pitch Competition</span></div>
+      </div>
     </section>
 
-    <section id="work" class="container section">
-      <h2>Selected Work</h2>
-      <div class="work-grid">
-        <article class="work-item">
-          <div class="work-header">
-            <h3>Progressive Web App Developer</h3>
-            <span class="work-date">Aug 2025 - Oct 2025</span>
-          </div>
-          <p class="work-company">Livelihood Impact Fund</p>
-          <p>Developed PWA for tender management serving 100+ users. Integrated OpenAI API to automate data extraction, reducing manual entry by ~30%.</p>
+    <!-- What I Build -->
+    <section class="container section" aria-labelledby="build-h">
+      <div class="section-head">
+        <span class="eyebrow">What I build</span>
+        <h2 id="build-h">From LLM pipelines to mobile apps</h2>
+      </div>
+      <div class="build-grid">
+        <article class="card build-card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 1.9 1.9.8-1.9.8L19 20.4l-.8-1.9-1.9-.8 1.9-.8z"/></svg></div>
+          <h3>AI-Powered Applications</h3>
+          <p>LLM-powered document processing, structured extraction, workflow automation, and AI-assisted products.</p>
         </article>
-        <article class="work-item">
-          <div class="work-header">
-            <h3>Full Stack Developer</h3>
-            <span class="work-date">Apr 2024 - Aug 2025</span>
-          </div>
-          <p class="work-company">SendBack</p>
-          <p>Built analytics pipeline for 10,000+ events using FastAPI, PostgreSQL, DynamoDB, and AWS. Improved auth success rate by 24% through funnel analysis.</p>
+        <article class="card build-card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+          <h3>Full-Stack Products</h3>
+          <p>Web and mobile applications built from the frontend through APIs, databases, integrations, and deployment.</p>
         </article>
-        <article class="work-item">
-          <div class="work-header">
-            <h3>Web Developer & Product Analytics</h3>
-            <span class="work-date">Jun 2024 - Aug 2024</span>
-          </div>
-          <p class="work-company">Sustain-a-Plate</p>
-          <p>Developed interactive dashboard with time-based filters. Led metric design that increased engagement by 31% and optimized queries by 40%.</p>
+        <article class="card build-card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
+          <h3>Backend &amp; Cloud Systems</h3>
+          <p>Production APIs, data pipelines, cloud infrastructure, databases, serverless applications, and automation.</p>
+        </article>
+        <article class="card build-card">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M7 15h10"/></svg></div>
+          <h3>Research Software</h3>
+          <p>Software for clinical and academic research, including mobile assessments, digital biomarkers, data collection, and analysis.</p>
         </article>
       </div>
-      <div style="text-align:center;margin-top:24px">
-        <a href="work.html" class="cta outline">View All Experience</a>
-      </div>
     </section>
 
-    <section id="projects" class="container section">
-      <h2>Featured Projects</h2>
-      <div class="project-grid">
-        <div class="project featured-project">
-          <div class="project-badge">🏆 First Prize</div>
-          <h4><a href="https://doreenyang.github.io/LifeFrame/" target="_blank" style="color:inherit;text-decoration:none">RemindMe</a></h4>
-          <p class="project-type">AI-Powered Memory Coach</p>
-          <p>AI-powered React app to capture and jog personal memories with voice-driven prompts, reminders, and a guided memory coach. First prize winner of 2-minute-video elevator pitch contest.</p>
-          <div class="project-tech">React 18 • Vite • Tailwind CSS • Web Speech API • GitHub Actions</div>
-        </div>
-        <div class="project">
-          <h4>Synaptrack Mobile App</h4>
-          <p class="project-type">Mobile Development • Research</p>
-          <p>Neuroscience research app for Dr. Jacob Greenberg Lab. Developed Android version using React Native, expanding potential participant base by ~50% and unifying iOS/Android codebases.</p>
-          <div class="project-tech">React Native • Xcode • Android Studio</div>
-        </div>
-        <div class="project">
-          <h4><a href="https://www.ideabounce.com/idea?recordId=recMUWmJncnUsNZHJ" target="_blank" style="color:inherit;text-decoration:none">TravelAI</a></h4>
-          <p class="project-type">AI Travel Assistant • SVC Semi-Finalist</p>
-          <p>AI-powered travel planning platform that personalizes recommendations, curates itineraries with hidden gems, and dynamically adjusts plans based on real-time data like weather and local events.</p>
-          <div class="project-tech">AI • Smart Assistant • Real-time Data • Full Stack</div>
-        </div>
+    <!-- Featured Experience -->
+    <section class="container section" aria-labelledby="xp-h">
+      <div class="section-head">
+        <span class="eyebrow">Featured experience</span>
+        <h2 id="xp-h">Where I've shipped software</h2>
       </div>
-      <div style="text-align:center;margin-top:24px">
-        <a href="projects.html" class="cta outline">View All Projects</a>
+      <div class="xp-list">
+        <article class="xp">
+          <div class="xp-top">
+            <div>
+              <h3>Software Engineer / Full-Stack Developer</h3>
+              <p class="org">Livelihood Impact Fund</p>
+            </div>
+            <span class="when">2025 – Present</span>
+          </div>
+          <p class="summary">Built and deployed a production tender-management platform with an AI document-processing pipeline that extracts structured data from unstructured tender documents.</p>
+          <span class="xp-metric">100+ users</span><span class="xp-metric">~30% less manual data entry</span>
+        </article>
+        <article class="xp">
+          <div class="xp-top">
+            <div>
+              <h3>Software Engineer / Research Developer</h3>
+              <p class="org">SynapTrack · Washington University Research</p>
+            </div>
+            <span class="when">2026 – Present</span>
+          </div>
+          <p class="summary">Building a smartphone-based digital biomarker platform for remote assessment of cervical spondylotic myelopathy — React Native on iOS and Android, a FastAPI + Azure Functions backend, and Health Connect / Apple Health integration.</p>
+        </article>
+        <article class="xp">
+          <div class="xp-top">
+            <div>
+              <h3>Founding Engineer / Full-Stack Developer</h3>
+              <p class="org">SendBack</p>
+            </div>
+            <span class="when">Apr 2024 – Aug 2025</span>
+          </div>
+          <p class="summary">Worked across web, mobile, backend, AWS infrastructure, and analytics for a product that simplifies returns. Built the analytics pipeline that found and fixed an authentication funnel problem.</p>
+          <span class="xp-metric">10,000+ events</span><span class="xp-metric">+24% auth success</span>
+        </article>
       </div>
+      <div class="section-more"><a href="experience.html" class="cta outline">View All Experience</a></div>
     </section>
 
-    <section id="contact" class="container section">
-      <h2>Contact</h2>
-      <p>Open to roles in product engineering, analytics, and ML tooling. <a href="mailto:doreenyang02@gmail.com?subject=Interested%20in%20connecting">Email me</a>.</p>
+    <!-- Featured Projects -->
+    <section class="container section" aria-labelledby="pj-h">
+      <div class="section-head">
+        <span class="eyebrow">Featured projects</span>
+        <h2 id="pj-h">Things I've built</h2>
+      </div>
+      <div class="pj-grid">
+        <article class="pj">
+          <p class="tags">AI · Full Stack · Production</p>
+          <h3><a href="projects.html#lif">LIF Tender Intelligence Platform</a></h3>
+          <p>A production platform that uses LLMs to turn unstructured tender documents into structured procurement data, supplier matching, and admin workflows.</p>
+          <ul class="chips"><li>Python</li><li>FastAPI</li><li>React</li><li>OpenAI API</li><li>AWS</li></ul>
+        </article>
+        <article class="pj">
+          <p class="tags">Digital Biomarkers · Mobile · Healthcare</p>
+          <h3><a href="projects.html#synaptrack">SynapTrack</a></h3>
+          <p>Smartphone-based assessments of gait, dexterity, and sensory function that collect structured clinical research data remotely.</p>
+          <ul class="chips"><li>React Native</li><li>FastAPI</li><li>Azure</li><li>Cosmos DB</li></ul>
+        </article>
+        <article class="pj">
+          <p class="tags">Startup · Full Stack · Analytics</p>
+          <h3><a href="projects.html#sendback">SendBack</a></h3>
+          <p>Web and mobile product for simpler returns. Analytics over 10,000+ events surfaced a sign-in failure, and fixing it improved authentication success by ~24%.</p>
+          <ul class="chips"><li>React</li><li>React Native</li><li>FastAPI</li><li>DynamoDB</li><li>AWS</li></ul>
+        </article>
+        <article class="pj">
+          <span class="pj-badge">1st Prize</span>
+          <p class="tags">AI-Powered Memory Coach</p>
+          <h3><a href="projects.html#remindme">RemindMe</a></h3>
+          <p>Voice-driven app that helps people capture and revisit personal memories through AI-generated prompts, reminders, and guided conversations.</p>
+          <ul class="chips"><li>React</li><li>Vite</li><li>Web Speech API</li></ul>
+        </article>
+      </div>
+      <div class="section-more"><a href="projects.html" class="cta outline">View All Projects</a></div>
     </section>
 
+    <!-- Technical Skills -->
+    <section class="container section" aria-labelledby="sk-h">
+      <div class="section-head">
+        <span class="eyebrow">Technical skills</span>
+        <h2 id="sk-h">Core stack</h2>
+      </div>
+      <div class="skill-groups">
+        <div class="card skill-group">
+          <h3>AI &amp; LLMs</h3>
+          <ul class="chips"><li>OpenAI API</li><li>LLM Applications</li><li>RAG</li><li>Prompt Engineering</li><li>PyTorch</li></ul>
+        </div>
+        <div class="card skill-group">
+          <h3>Backend &amp; Data</h3>
+          <ul class="chips"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>DynamoDB</li><li>Cosmos DB</li><li>SQL</li></ul>
+        </div>
+        <div class="card skill-group">
+          <h3>Frontend &amp; Mobile</h3>
+          <ul class="chips"><li>TypeScript</li><li>React</li><li>Next.js</li><li>React Native</li><li>Tailwind CSS</li></ul>
+        </div>
+        <div class="card skill-group">
+          <h3>Cloud &amp; Infrastructure</h3>
+          <ul class="chips"><li>AWS</li><li>Azure Functions</li><li>Docker</li><li>Serverless</li><li>CI/CD</li></ul>
+        </div>
+      </div>
+      <div class="section-more"><a href="skills.html" class="cta outline">View All Skills</a></div>
+    </section>
+
+    <!-- About -->
+    <section class="container section" aria-labelledby="about-h">
+      <div class="section-head">
+        <span class="eyebrow">About</span>
+        <h2 id="about-h">Engineer across the stack</h2>
+      </div>
+      <div class="prose">
+        <p>I'm a software engineer interested in the intersection of artificial intelligence, software systems, and real-world products. I've worked on production tender-management systems, startup products, and mobile software for clinical research — and I like owning problems from the initial idea through implementation, deployment, debugging, and iteration.</p>
+      </div>
+      <a href="about.html" class="cta outline">More About Me</a>
+    </section>
+
+    <!-- Resume + Contact -->
+    <section class="container section" aria-labelledby="contact-h">
+      <div class="band">
+        <div>
+          <h2 id="contact-h">Let's build something useful</h2>
+          <p>I'm interested in challenging software problems, AI-powered applications, backend systems, and data-intensive products. If you're building something technically interesting, I'd be happy to connect.</p>
+          <a class="cta" href="mailto:doreenyang02@gmail.com?subject=Interested%20in%20connecting">Email Me</a>
+          <a class="cta outline" href="resume.html">Download Resume</a>
+        </div>
+        <div>
+          <h3>Currently looking for</h3>
+          <ul class="chips lg"><li>Software Engineering</li><li>AI Engineering</li><li>Data Engineering</li></ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">© 2025 Deyuan Yang — Built with HTML, CSS & JS • <a href="resume.html">Resume</a></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-name">Deyuan Yang</div>
+          <div class="footer-title">Software Engineer · AI Engineer · Full-Stack Developer</div>
+          <div class="footer-tag">Building useful software with AI, data, and modern engineering.</div>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="https://github.com/Doreenyang" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/deyuan-yang-ba7680222/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:doreenyang02@gmail.com">Email</a>
+          <a href="resume.html">Resume</a>
+        </nav>
+      </div>
+      <div class="footer-copy">© 2026 Deyuan Yang</div>
+    </div>
   </footer>
   <script src="assets/main.js"></script>
   <!-- Chat widget -->
   <div id="chat-root"></div>
   <script src="assets/chat.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 </body>
 </html>
